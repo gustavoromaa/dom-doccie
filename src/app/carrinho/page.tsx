@@ -46,16 +46,16 @@ export default function Carrinho() {
                             />
                             <div className="h1p">
                                 <h1 className={`${poppins.className}`}>Bolo no pote</h1>
-                                <p className={`${poppins.className}`}>Kit kat</p>
+                                <p className={`${poppins.className}`}><span style={{ fontWeight: '300' }}>Kit Kat</span></p>
                             </div>
 
                             <div className="contador">
                                 <button className={`menos ${poppins.className}`}>-</button>
-                                <p className={`${poppins.className}`}>2</p>
+                                <p className={`${poppins.className}`}><span style={{ fontWeight: '300' }}>2</span></p>
                                 <button className={`mais ${poppins.className}`}>+</button>
                             </div>
 
-                            <p className={`${poppins.className}`}>R$ 15,00</p>
+                            <p className={`valor ${poppins.className}`}><span style={{ fontWeight: '300' }}>R$ 15,00</span></p>
 
                             <div className="remove__item">
                                 <button className="btnRemove_item">
