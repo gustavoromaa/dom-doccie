@@ -17,6 +17,15 @@ export default function BtnAdicionarCarrinho(produto: SaboresType) {
             theme: "colored",
             transition: Slide,
         });
+
+        const produtoCarrinho: ProdutoCarrinhoType = {
+            ...produto,
+            precoTotal: produto.precoUnitario,
+            quantidade: 1,
+        }
+
+        CarrinhoService.getInstance().adicionarProduto(produtoCarrinho);
+
     }
 
     return (

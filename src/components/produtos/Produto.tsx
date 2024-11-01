@@ -35,8 +35,8 @@ const poppins = Poppins({
   subsets: ['latin'],
 });
 
-export default function Produto({ id, nome, descricao, precoUnitario, cor_principal, imagem, alt }: SaboresType) {
-  const produto = { id, nome, descricao, precoUnitario, cor_principal, imagem, alt };
+export default function Produto({ id, categoria, nome, descricao, precoUnitario, cor_principal, imagem, alt }: SaboresType) {
+  const produto = { id, categoria, nome, descricao, precoUnitario, cor_principal, imagem, alt };
 
   return (
     <div className="card" data-id={produto.id}>

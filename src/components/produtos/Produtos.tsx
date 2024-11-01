@@ -9,7 +9,6 @@ import brownie from "/public/produtos/brownie.webp"
 
 import { WindSong } from 'next/font/google'
 import { Poppins } from "next/font/google";
-import separator from "/public/onda.svg"
 
 const windSong = WindSong({
     weight: '400',
@@ -39,7 +38,6 @@ export default function Produtos() {
     return (
         <div>
             <div className="nossos_doces_separator_container">
-            <Image src={separator} alt="Onda" className="nossos_doces_separator" />
             </div>
             <div className="nossos_doces_container">
                 <h1 className={`${windSong.className}`}>Nossos Doces</h1>

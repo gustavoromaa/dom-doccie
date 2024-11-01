@@ -18,8 +18,6 @@ import { Yrsa } from 'next/font/google'
 import { Alata } from 'next/font/google'
 import localFont from 'next/font/local'
 
-import Onda from "/public/onda.svg"
-
 const schibstedGrotesk = Yrsa({
   weight: ['400', '700'],
   style: ['normal', 'italic'],

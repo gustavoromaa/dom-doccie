@@ -1,5 +1,6 @@
 export interface SaboresType {
     id?: number,
+    categoria?: string,
     nome: string;
     descricao: string;
     precoUnitario: number;

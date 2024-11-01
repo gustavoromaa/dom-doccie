@@ -1,11 +1,10 @@
 header {
-  color: #fff;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 30px 10%;
+  padding: 10px 10%;
   box-sizing: border-box;
   position: absolute;
   top: 0;
@@ -23,6 +22,7 @@ header {
 }
 
 .logotxt {
+  color: var(--background);
   font-size: 3.5rem;
   cursor: pointer;
   flex-grow: 1;
@@ -78,6 +78,7 @@ header {
   font-size: 3rem;
   transition: all 0.3s ease 0s;
   margin-left: auto;
+  color: var(--background);
 }
 
 .slogan-container {
@@ -105,7 +106,6 @@ header {
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0 10%;
   box-sizing: border-box;
 }
 
@@ -115,6 +115,7 @@ header {
 }
 
 .slogan-text {
+  color: var(--background);
   font-size: 4.5rem;
   width: 100%;
   font-style: italic;
@@ -199,6 +200,7 @@ header {
   header {
     display: none;
   }
+
   .header_mobile {
     color: #fff;
     font-weight: 500;
@@ -213,6 +215,14 @@ header {
     text-align: center;
   }
   
+  .slogan-container {
+    height: 100vh;
+    background-clip: border-box;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
   .logotxt {
     font-size: 2rem;
   }

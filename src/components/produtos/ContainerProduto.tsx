@@ -20,10 +20,11 @@ export default function ContainerProdutos({titulo, cor_principal, sabores}: Prod
           {sabores.map((produto, index) => (
               <Produto 
                 key={index}
+                categoria={titulo}
                 id={produto.id} 
                 nome={produto.nome} 
                 descricao={produto.descricao} 
-                cor_principal={produto.cor_principal}
+                cor_principal={cor_principal}
                 imagem={produto.imagem}
                 precoUnitario={produto.precoUnitario}
                 alt={`${produto.alt} - ${produto.nome}`}

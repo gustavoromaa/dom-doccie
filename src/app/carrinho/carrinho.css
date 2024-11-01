@@ -18,10 +18,42 @@
 .carrinho_list__products {
     width: 53rem;
     height: 31rem;
-    background-color: #FAF8F8;
     padding: 1rem;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
+    background-color: var(--rosa-claro);
+}
+
+.carrinho_list__products_header {
+    color: #fff;
+    gap: 1rem;
+}
+
+.carrinho_list__products_product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FAF8F8;
+    width: 100%;
+}
+
+.h1p h1 {
+    font-size: 1.188rem;
+}
+
+.h1p p {
+    text-align: center;
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.carrinho_list__products_product img {
+    width: 80px;
 }
 
 .carrinho_summary {
@@ -49,5 +81,5 @@
 }
 
 .carrinho_delivery {
-    height: 12rem;
+    height: 15.2rem;
 }

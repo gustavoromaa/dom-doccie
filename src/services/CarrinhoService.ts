@@ -19,6 +19,8 @@ export class CarrinhoService {
     }
   
     private salvarCarrinho(): void {
+      this.carrinho.valorCarrinho = this.carrinho.produtos.reduce((acc, p) => acc + p.precoTotal!, 0);
+      this.carrinho.quantidadeTotal = this.carrinho.produtos.reduce((acc, p) => acc + p.quantidade, 0);
       localStorage.setItem(CARRINHO_STORAGE_KEY, JSON.stringify(this.carrinho));
     }
   
@@ -31,7 +33,7 @@ export class CarrinhoService {
       const produtoExistente = this.carrinho.produtos.find(p => p.id === produto.id);
       if (produtoExistente) {
           produtoExistente.quantidade += 1;
-          produtoExistente.precoTotal += produtoExistente.precoUnitario;
+          produtoExistente.precoTotal! += produtoExistente.precoUnitario;
       } else {
           const novoProduto: ProdutoCarrinhoType = {
             ...produto,
@@ -41,10 +43,6 @@ export class CarrinhoService {
           this.carrinho.produtos.push(novoProduto);
       }
       this.salvarCarrinho();
-    }
-
-    private calcularPrecoCarrinho(): number {
-      return this.carrinho.produtos.reduce((acc, p) => acc + p.precoTotal, 0);
     }
 
     removerProduto(produto: SaboresType): void;
