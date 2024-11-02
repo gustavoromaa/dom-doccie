@@ -1,144 +1,80 @@
 {
   "produtos": {
-    "bolo_no_pote": {
+    "doces_background": {
       "titulo": "Bolo no pote",
       "cor_principal": "#F9AAC0",
       "sabores": [
         {
           "id": 1,
-          "nome": "Brigadeiro",
-          "descricao": "brigadeiro",
+          "nome": "Brigadeiro c/ Morango",
+          "descricao": "Bolo de Baunilha, Morango, Brigadeiro de Chocolate ou Brigadeiro de Ninho",
           "alt": "Bolo no pote",
-          "imagem": "bp_brigadeiro",
-          "precoUnitario": 15.00
+          "imagem": "bp_brigadeiroMorango",
+          "precoUnitario": 15
         },
         {
           "id": 2,
-          "nome": "Brigadeiro c/ Morango",
-          "descricao": "Brigadeiro c/ Morango",
+          "nome": "Brigadeiro Branco c/ Uva",
+          "descricao": "chocolate branco com bombom ouro branco",
           "alt": "Bolo no pote",
-          "imagem": "bp_brigadeiroMorango",
-          "precoUnitario": 15.00
+          "imagem": "bp_brigadeiroBrancoUva",
+          "precoUnitario": 15
         },
         {
           "id": 3,
-          "nome": "Brigadeiro Branco c/ Uva",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Ouro branco",
+          "descricao": "Bolo de Baunilha, Bombom Ouro Branco, Brigadeiro branco",
           "alt": "Bolo no pote",
-          "imagem": "bp_brigadeiroBrancoUva",
-          "precoUnitario": 15.00
+          "imagem": "bp_ouroBranco",
+          "precoUnitario": 15
         },
         {
           "id": 4,
-          "nome": "Ouro branco",
-          "descricao": "Chocolate ao leite com granulado",
+          "nome": "Sonho de Valsa",
+          "descricao": "Bolo de Chocolate, Sonho de Valsa, Brigadeiro de Chocolate",
           "alt": "Bolo no pote",
-          "imagem": "bp_ouroBranco",
-          "precoUnitario": 15.00
+          "imagem": "bp_sonhoDeValsa",
+          "precoUnitario": 15
         },
         {
           "id": 5,
-          "nome": "Sonho de Valsa",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Prestígio",
+          "descricao": "Bolo de Baunilha, Coco ralado, Brigadeiro de Chocolate",
           "alt": "Bolo no pote",
-          "imagem": "bp_sonhoDeValsa",
-          "precoUnitario": 15.00
+          "imagem": "bp_prestigio",
+          "precoUnitario": 15
         },
         {
           "id": 6,
-          "nome": "Prestigio",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Maracujá",
+          "descricao": "Bolo de Baunilha ou Chocolate, Brigadeiro de Maracujá ou Chocolate, Geleia Artesanal de Maracujá",
           "alt": "Bolo no pote",
-          "imagem": "bp_prestigio",
-          "precoUnitario": 15.00
+          "imagem": "bp_maracuja",
+          "precoUnitario": 15
         },
         {
           "id": 7,
-          "nome": "Beijinho",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Amendoim/Shot",
+          "descricao": "Bolo de Chocolate, Chocolate Shot, Amendoim, Brigadeiro de Chocolate",
           "alt": "Bolo no pote",
-          "imagem": "bp_prestigio",
-          "precoUnitario": 15.00
+          "imagem": "bp_amendoim",
+          "precoUnitario": 15
         },
         {
           "id": 8,
-          "nome": "Maracuja",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Oreo",
+          "descricao": "Bolo de Baunilha, Brigadeiro de Oreo, Biscoito Oreo",
           "alt": "Bolo no pote",
-          "imagem": "bp_maracuja",
-          "precoUnitario": 15.00
+          "imagem": "bp_oreo",
+          "precoUnitario": 15
         },
         {
           "id": 9,
-          "nome": "Amendoim/Shot",
-          "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
-          "imagem": "bp_amendoim",
-          "precoUnitario": 15.00
-        },
-        {
-          "id": 10,
-          "nome": "Ferrero Rocher",
-          "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
-          "imagem": "bp_ferrerorocher",
-          "precoUnitario": 15.00
-        },
-        {
-          "id": 11,
-          "nome": "Paçoca",
-          "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
-          "imagem": "bp_pacoca",
-          "precoUnitario": 15.00
-        },
-        {
-          "id": 12,
-          "nome": "Oreo",
-          "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
-          "imagem": "bp_oreo",
-          "precoUnitario": 15.00
-        },
-        {
-          "id": 13,
-          "nome": "Dois Amores",
-          "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
-          "imagem": "bp_doisAmores",
-          "precoUnitario": 15.00
-        },
-        {
-          "id": 14,
-          "nome": "Bis Oreo",
-          "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
-          "imagem": "bp_oreo",
-          "precoUnitario": 15.00
-        },
-        {
-          "id": 15,
           "nome": "Kit Kat",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "descricao": "Bolo de Chocolate ou Baunilha, KitKat Branco ou Preto, Brigadeiro de Chocolate ou Brigadeiro Branco",
           "alt": "Bolo no pote",
           "imagem": "bp_kitkat",
-          "precoUnitario": 15.00
-        },
-        {
-          "id": 16,
-          "nome": "Laka",
-          "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
-          "imagem": "bp_laka",
-          "precoUnitario": 15.00
-        },
-        {
-          "id": 17,
-          "nome": "Abacaxi c/ Coco",
-          "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
-          "imagem": "bp_abacaxi",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         }
       ]
     },
@@ -147,68 +83,68 @@
       "cor_principal": "#706DC3",
       "sabores": [
         {
-          "id": 18,
+          "id": 10,
           "nome": "Brigadeiro",
           "descricao": "Chocolate ao leite com granulado",
-          "alt": "Bolo no pote",
+          "alt": "Bombom",
           "imagem": "bp_chocolate",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         },
         {
-          "id": 19,
+          "id": 11,
           "nome": "Brigadeiro c/ Morango",
           "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
+          "alt": "Bombom",
           "imagem": "bp_chocolate",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         },
         {
-          "id": 20,
+          "id": 12,
           "nome": "Brigadeiro Branco c/ Uva",
           "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
+          "alt": "Bombom",
           "imagem": "bp_chocolate",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         },
         {
-          "id": 21,
-          "nome": "Prestigio/Beijinho",
+          "id": 13,
+          "nome": "Beijinho",
           "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
+          "alt": "Bombom",
           "imagem": "bp_chocolate",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         },
         {
-          "id": 22,
-          "nome": "Maracuja",
+          "id": 14,
+          "nome": "Maracujá",
           "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
+          "alt": "Bombom",
           "imagem": "bp_chocolate",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         },
         {
-          "id": 23,
+          "id": 15,
           "nome": "Amendoim",
           "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
+          "alt": "Bombom",
           "imagem": "bp_chocolate",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         },
         {
-          "id": 24,
+          "id": 16,
           "nome": "Ferrero Rocher",
           "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
+          "alt": "Bombom",
           "imagem": "bp_chocolate",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         },
         {
-          "id": 25,
+          "id": 17,
           "nome": "Dois Amores",
           "descricao": "Chocolate branco com bombom ouro branco",
-          "alt": "Bolo no pote",
+          "alt": "Bombom",
           "imagem": "bp_chocolate",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         }
       ]
     },
@@ -217,12 +153,12 @@
       "cor_principal": "#65A7FF",
       "sabores": [
         {
-          "id": 26,
+          "id": 18,
           "nome": "Brownie",
           "descricao": "Chocolate ao leite com granulado",
-          "alt": "Bolo no pote",
+          "alt": "Brownie",
           "imagem": "bp_chocolate",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         }
       ]
     },
@@ -231,12 +167,12 @@
       "cor_principal": "#79B370",
       "sabores": [
         {
-          "id": 27,
+          "id": 19,
           "nome": "Barra",
           "descricao": "banana",
-          "alt": "Bolo no pote",
+          "alt": "Barra Recheada",
           "imagem": "bp_kitkat",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         }
       ]
     },
@@ -245,12 +181,12 @@
       "cor_principal": "#7BD0B6",
       "sabores": [
         {
-          "id": 28,
+          "id": 20,
           "nome": "Copo da Felicidade",
           "descricao": "Copo da Felicidade",
           "alt": "Copo da Felicidade",
           "imagem": "bp_oreo",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         }
       ]
     },
@@ -259,12 +195,12 @@
       "cor_principal": "#E0794C",
       "sabores": [
         {
-          "id": 28,
+          "id": 21,
           "nome": "Slice Cake",
           "descricao": "Slice Cake",
           "alt": "Slice Cake",
           "imagem": "bp_pacoca",
-          "precoUnitario": 15.00
+          "precoUnitario": 15
         }
       ]
     }

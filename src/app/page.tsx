@@ -15,7 +15,6 @@ import cardapio from "./../../cardapio.json"
 import { FaArrowUp } from "react-icons/fa";
 
 import { Yrsa } from 'next/font/google'
-import { Alata } from 'next/font/google'
 import localFont from 'next/font/local'
 
 const schibstedGrotesk = Yrsa({
@@ -23,12 +22,6 @@ const schibstedGrotesk = Yrsa({
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
-})
-
-const alata = Alata({
-  weight: ['400'],
-  style: ['normal'],
-  subsets: ['latin'],
 })
 
 export default function Home() {

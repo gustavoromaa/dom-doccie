@@ -1,22 +1,23 @@
-import { Alata } from 'next/font/google'
 import Produto from './Produto'
 import cardapio from "./../../../cardapio.json"
 import { ProdutoType } from '../../models/produto';
 
+import { Poppins } from "next/font/google";
 
-const alata = Alata({
-    weight: ['400'],
-    style: ['normal'],
+const poppins = Poppins({
+    weight: ['100', '200', '300', '400', '500', '600', '700'],
     subsets: ['latin'],
-  })
+});
+
 
 export default function ContainerProdutos({titulo, cor_principal, sabores}: ProdutoType) {
     return (
-        <div className="bolo_no_pote" style={{backgroundColor: cor_principal}}>
-
-          <h1 className={`bonopote ${alata.className}`}>{titulo}</h1>
-
+        <div className="doces_background" style={{backgroundColor: cor_principal}}>
           <div className="doces_container">
+
+          <h1 className={`doces_titulo ${poppins.className}`}>{titulo}</h1>
+
+          <div className="doces_opcoes_container">
           {sabores.map((produto, index) => (
               <Produto 
                 key={index}
@@ -30,6 +31,7 @@ export default function ContainerProdutos({titulo, cor_principal, sabores}: Prod
                 alt={`${produto.alt} - ${produto.nome}`}
               />
             ))}
+            </div>
           </div>
         </div>
     )

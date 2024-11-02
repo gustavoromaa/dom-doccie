@@ -4,13 +4,22 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 10%;
+  padding: 0 10%;
   box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
+}
+
+.headerbanana {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 8%;
+  box-sizing: border-box;
 }
 
 .header_mobile {
@@ -22,8 +31,8 @@ header {
 }
 
 .logotxt {
-  color: var(--background);
-  font-size: 3.5rem;
+  color: #fff;
+  font-size: 4.5rem;
   cursor: pointer;
   flex-grow: 1;
   text-align: center;
@@ -35,11 +44,6 @@ header {
 .btnbag:hover {
   cursor: pointer;
   transform: scale(1.25, 1.25);
-}
-
-.active {
-  transform: scale(1.25, 1.25);
-  color: #fcfae2;
 }
 
 .navbar {
@@ -75,10 +79,10 @@ header {
   border: none;
   cursor: pointer;
   color: inherit;
-  font-size: 3rem;
+  font-size: 2.8rem;
   transition: all 0.3s ease 0s;
   margin-left: auto;
-  color: var(--background);
+  color: #fff;
 }
 
 .slogan-container {
@@ -137,9 +141,11 @@ header {
   .logotxt {
     font-size: 3rem;
   }
+
   .slogan-text {
     font-size: 4rem;
   }
+
   .highlighted-text {
     font-size: 3.5rem;
   }
@@ -149,9 +155,11 @@ header {
   .logotxt {
     font-size: 2.5rem;
   }
+
   .slogan-text {
     font-size: 3.5rem;
   }
+
   .highlighted-text {
     font-size: 3rem;
   }
@@ -161,15 +169,19 @@ header {
   .logotxt {
     font-size: 2rem;
   }
+
   .slogan-text {
     font-size: 3rem;
   }
+
   .highlighted-text {
     font-size: 2.5rem;
   }
+
   .nav-links {
     flex-direction: column;
   }
+
   .nav-links li {
     margin-bottom: 1rem;
   }
@@ -179,18 +191,23 @@ header {
   .logotxt {
     font-size: 1.5rem;
   }
+
   .slogan-text {
     font-size: 2.5rem;
   }
+
   .highlighted-text {
     font-size: 2rem;
   }
+
   .navbar {
     flex-direction: column;
   }
+
   .nav-links {
     flex-direction: column;
   }
+
   .nav-links li {
     margin-bottom: 0.5rem;
   }
@@ -198,21 +215,7 @@ header {
 
 @media (max-width: 480px) {
   header {
-    display: none;
-  }
-
-  .header_mobile {
-    color: #fff;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 30px 10%;
-    box-sizing: border-box;
-    position: absolute;
-    z-index: 10;
-    text-align: center;
+    padding: 0 5%;
   }
   
   .slogan-container {
@@ -226,18 +229,23 @@ header {
   .logotxt {
     font-size: 2rem;
   }
+
   .slogan-text {
     font-size: 2rem;
   }
+
   .highlighted-text {
     font-size: 1.5rem;
   }
+
   .navbar {
     flex-direction: column;
   }
+
   .nav-links {
     flex-direction: column;
   }
+
   .nav-links li {
     margin-bottom: 0.5rem;
   }

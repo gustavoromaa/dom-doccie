@@ -31,11 +31,11 @@ const alata = Alata({
 });
 
 const poppins = Poppins({
-  weight: '400',
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
   subsets: ['latin'],
 });
 
-export default function Produto({ id, categoria, nome, descricao, precoUnitario, cor_principal, imagem, alt }: SaboresType) {
+export default function Produto({ id, categoria, nome, descricao, precoUnitario, cor_principal, imagem, alt}: SaboresType) {
   const produto = { id, categoria, nome, descricao, precoUnitario, cor_principal, imagem, alt };
 
   return (
@@ -48,9 +48,10 @@ export default function Produto({ id, categoria, nome, descricao, precoUnitario,
         className="card_image"
       />
 
-      <div className="card_links">
+      <div className="doces_details">
         <h1 className={`titulo ${sagona.className}`}>{produto.nome}</h1>
         <h2 className={`card_produto_descricao ${poppins.className}`}>{produto.descricao}</h2>
+        <h1 className={`card_produto_valor ${poppins.className}`}>R${produto.precoUnitario}</h1>
       </div>
 
       <div className={`${poppins.className}`}><BtnAdicionarCarrinho {...produto} /></div>

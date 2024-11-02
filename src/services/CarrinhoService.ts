@@ -28,6 +28,15 @@ export class CarrinhoService {
       const carrinhoJson = localStorage.getItem(CARRINHO_STORAGE_KEY);
       return carrinhoJson ? JSON.parse(carrinhoJson) : { produtos: [] };
     }
+
+    atualizarQuantidade(produtoId: number, quantidade: number): void {
+      const produto = this.carrinho.produtos.find(p => p.id === produtoId);
+      if (produto) {
+        produto.quantidade = quantidade;
+        produto.precoTotal = produto.precoUnitario * quantidade;
+        this.salvarCarrinho();
+      }
+    }
   
     adicionarProduto(produto: ProdutoCarrinhoType): void {
       const produtoExistente = this.carrinho.produtos.find(p => p.id === produto.id);

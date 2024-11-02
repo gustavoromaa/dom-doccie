@@ -1,126 +1,115 @@
-.bolo_no_pote {
+.doces_background {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 150px 150px;
+  gap: 2rem;
+  padding: 50px 0;
 }
 
 .doces_container {
+  width: 50%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
-  width: 100%;
-  max-width: 60%;
-  justify-content: center;
 }
 
-.bonopote {
-  font-size: 5rem;
-  color: #FAEFD6;
+.doces_titulo {
+  font-size: 4.5rem;
+  font-weight: 200;
+  color: var(--background);
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.doces_opcoes_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  margin-bottom: 2rem;
 }
 
 .card {
-  background-color: #fff;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  box-shadow: 0px 10px 36px -12px rgb(105, 104, 105);
-  border-radius: 20px;
   gap: 1.3rem;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  flex: 1 1 calc(33.333% - 30px);
-  max-width: calc(33.333% - 30px);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
   text-align: center;
-  box-sizing: border-box;
+  margin-right: 90px;
+  width: auto;
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #5D3A2E;
   text-align: center;
-  overflow-wrap: break-word;
-  max-width: 100%;
-  line-height: 1em;
   margin: 0;
+  line-height: 1em;
 }
 
-.card_links {
+.doces_details {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
+  justify-content: center;
+  align-content: center;
 }
 
 .card_produto_descricao {
-  margin-top: -0.4rem;
-  font-size: 1.5rem;
-  text-align: center;
   font-size: 1rem;
   color: #333;
+  text-transform: lowercase;
+}
+
+.card_produto_valor {
+  font-weight: 500;
 }
 
 .card img {
-  width: 150px;
-  height: 150px;
-  aspect-ratio: 3/4;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 10px;
+  align-self: center;
 }
 
 .add_cart {
-  padding: 10px 20px;
-  background-color: #F9AAC0;
+  padding: 10px;
   border-radius: 10px;
   color: #fff;
   font-size: 18px;
-  transition: color 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
   cursor: pointer;
-}
+  transition: background-color 0.3s;
+  text-wrap: nowrap;
 
-.add_cart::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: radial-gradient(circle, #5D3A2E 0%, #5D3A2E 50%, transparent 50%, transparent 100%);
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  border-radius: 50%;
-  z-index: -1;
-  transform: translate(-50%, -50%) scale(0);
-}
-
-.add_cart:hover::before {
-  transform: translate(-50%, -50%) scale(1);
 }
 
 .add_cart:hover {
-  color: #fff;
-}
-
-.add_cart span {
-  position: relative;
-  z-index: 2;
+  background-color: #47312e;
 }
 
 @media (max-width: 1200px) {
-  .bolo_no_pote {
+  .doces_background {
     padding: 100px 100px;
   }
-  .bonopote {
+
+  .doces_titulo {
     font-size: 4rem;
   }
+
   .card {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
@@ -128,16 +117,19 @@
 }
 
 @media (max-width: 768px) {
-  .bolo_no_pote {
+  .doces_background {
     padding: 50px 50px;
   }
-  .bonopote {
+
+  .doces_titulo {
     font-size: 3rem;
   }
+
   .card {
     flex: 1 1 100%;
     max-width: 100%;
   }
+
   .card img {
     width: 100px;
     height: 100px;
@@ -145,22 +137,27 @@
 }
 
 @media (max-width: 480px) {
-  .bolo_no_pote {
+  .doces_background {
     padding: 20px 20px;
   }
-  .bonopote {
+
+  .doces_titulo {
     font-size: 2rem;
   }
+
   .card {
     padding: 10px;
   }
+
   .card h1 {
     font-size: 1.5rem;
   }
+
   .card img {
     width: 80px;
     height: 80px;
   }
+
   .add_cart {
     font-size: 16px;
     padding: 8px 16px;

@@ -30,7 +30,7 @@ export default function Produtos() {
             container.scrollIntoView({ behavior: 'smooth' });
             setTimeout(() => {
                 const containerRect = container.getBoundingClientRect();
-                window.scrollBy(0, containerRect.top - -120);
+                window.scrollBy(0, containerRect.top - -10);
             });
         }
     };
@@ -39,7 +39,7 @@ export default function Produtos() {
         <div>
             <div className="nossos_doces_separator_container">
             </div>
-            <div className="nossos_doces_container">
+            <div className="nossos_doces_opcoes_container">
                 <h1 className={`${windSong.className}`}>Nossos Doces</h1>
 
                 <div className="nossos_doces_opcoes">
