@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ProdutoCarrinhoType } from "../../models/carrinho";
 import { Poppins } from "next/font/google";
 import { CarrinhoService } from "../../services/CarrinhoService";
+import { useCarrinho } from "../../context/CarrinhoContext";
 
 const poppins = Poppins({
   weight: ['300', '500', '700'],
@@ -10,10 +11,13 @@ const poppins = Poppins({
 
 export default function ContadorQuantidade({ item, quantidade, setQuantidade }: { item: ProdutoCarrinhoType, quantidade: number, setQuantidade: (quantidade: number) => void }) {
 
+  const { atualizarCarrinho } = useCarrinho();
+
   function incrementar() {
     const novaQuantidade = quantidade + 1;
     setQuantidade(novaQuantidade);
     CarrinhoService.getInstance().atualizarQuantidade(item.id, novaQuantidade);
+    atualizarCarrinho();
   }
 
   function decrementar() {
@@ -21,6 +25,7 @@ export default function ContadorQuantidade({ item, quantidade, setQuantidade }: 
       const novaQuantidade = quantidade - 1;
       setQuantidade(novaQuantidade);
       CarrinhoService.getInstance().atualizarQuantidade(item.id, novaQuantidade);
+      atualizarCarrinho();
     }
   }
 

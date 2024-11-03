@@ -4,21 +4,24 @@ import { Poppins } from "next/font/google";
 import { ProdutoCarrinhoType } from "../../models/carrinho";
 import ContadorQuantidade from "./ContadorQuantidade";
 import { useState, useEffect } from "react";
+import { useCarrinho } from "../../context/CarrinhoContext";
 
 const poppins = Poppins({
     weight: ['300', '500', '700'],
     subsets: ['latin'],
 });
 
-export default function ItemCarrinho({item}: {item: ProdutoCarrinhoType}) {
+export default function ItemCarrinho({ item }: { item: ProdutoCarrinhoType }) {
     const [quantidade, setQuantidade] = useState(item.quantidade);
     const [precoTotal, setPrecoTotal] = useState(item.precoTotal);
+    const { atualizarCarrinho } = useCarrinho();
 
     useEffect(() => {
         setPrecoTotal(item.precoUnitario * quantidade);
-    }, [quantidade, item.precoUnitario]);
+        atualizarCarrinho();
+    }, [quantidade, item.precoUnitario, atualizarCarrinho]);
 
-    return(
+    return (
         <div className="carrinho_list__products_item">
             <Image
                 src={`/produtos/${item.imagem}.png`}

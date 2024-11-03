@@ -6,6 +6,7 @@ import { ProdutoType } from "../../models/produto";
 
 import Image from "next/image";
 import brownie from "/public/produtos/brownie.webp"
+import boloNoPote from "/public/bolonopote.jpg"
 
 import { WindSong } from 'next/font/google'
 import { Poppins } from "next/font/google";
@@ -48,11 +49,12 @@ export default function Produtos() {
                             <Image
                                 key={index}
                                 className="nossos_doces_img"
-                                src={brownie}
+                                src={boloNoPote}
                                 alt={produtos[key].titulo}
                                 onClick={() => handleImageClick(index)}
                                 style={{ boxShadow: `9px 3px 0 -2px ${produtos[key].cor_principal}` }}
                             />
+                            
 
                             <p className={`nossos_doces_p ${poppins.className}`}>{produtos[key].titulo}</p>
                         </div>

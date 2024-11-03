@@ -3,6 +3,7 @@
     "doces_background": {
       "titulo": "Bolo no pote",
       "cor_principal": "#F9AAC0",
+      "imagem": "boloNoPote",
       "sabores": [
         {
           "id": 1,
