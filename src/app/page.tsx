@@ -1,21 +1,17 @@
 'use client'
 
-import { useEffect } from 'react';
-import { ToastContainer, Bounce } from 'react-toastify';
+import { Bounce, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import Image from "next/image";
+import { FaArrowUp } from "react-icons/fa";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
-import Produto from "../components/produtos/Produto";
 import Produtos from "../components/produtos/Produtos";
-import ContainerProdutos from '../components/produtos/ContainerProduto';
-import Image from "next/image";
-import logoSlogan from "/public/doccieslogan.svg"
-import cardapio from "./../../cardapio.json"
-import { FaArrowUp } from "react-icons/fa";
+import logoSlogan from "/public/doccieslogan.svg";
 
-import { Yrsa } from 'next/font/google'
-import localFont from 'next/font/local'
+import { Yrsa } from 'next/font/google';
+import { useEffect } from 'react';
 
 const schibstedGrotesk = Yrsa({
   weight: ['400', '700'],
@@ -24,10 +20,31 @@ const schibstedGrotesk = Yrsa({
   display: 'swap',
 })
 
+
+
+function backTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
+function addScrollEvent() {
+  window.addEventListener('scroll', function () {
+    let scroll = document.querySelector('.scrollTop')
+    scroll?.classList.toggle('active', window.scrollY > 450)
+  })
+}
+
 export default function Home() {
+
+  useEffect(() => {
+    addScrollEvent()
+  }, [])
+
   return (
     <div>
-      <Header/>
+      <Header />
 
       <div className={`slogan-container ${schibstedGrotesk.className}`}>
         <div className="slogan-content">
@@ -62,9 +79,10 @@ export default function Home() {
         transition={Bounce}
       />
 
-      <a href="#" className="back-to-top">
-        <span className="material-icons"><FaArrowUp/></span>
-      </a>
+      <button className='scrollTop' onClick={backTop}>
+        <FaArrowUp />
+      </button>
+
     </div>
   );
 }

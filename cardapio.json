@@ -3,7 +3,7 @@
     "doces_background": {
       "titulo": "Bolo no pote",
       "cor_principal": "#F9AAC0",
-      "imagem": "boloNoPote",
+      "imagem": "bolonopote",
       "sabores": [
         {
           "id": 1,
@@ -82,6 +82,7 @@
     "bombom": {
       "titulo": "Bombom",
       "cor_principal": "#706DC3",
+      "imagem": "bombons",
       "sabores": [
         {
           "id": 10,
@@ -152,6 +153,7 @@
     "brownie": {
       "titulo": "Brownie",
       "cor_principal": "#65A7FF",
+      "imagem": "brownie",
       "sabores": [
         {
           "id": 18,
@@ -163,23 +165,10 @@
         }
       ]
     },
-    "barraRecheada": {
-      "titulo": "Barra Recheada",
-      "cor_principal": "#79B370",
-      "sabores": [
-        {
-          "id": 19,
-          "nome": "Barra",
-          "descricao": "banana",
-          "alt": "Barra Recheada",
-          "imagem": "bp_kitkat",
-          "precoUnitario": 15
-        }
-      ]
-    },
     "copoDaFelicidade": {
       "titulo": "Copo da Felicidade",
       "cor_principal": "#7BD0B6",
+      "imagem": "copodafelicidade",
       "sabores": [
         {
           "id": 20,
@@ -187,20 +176,6 @@
           "descricao": "Copo da Felicidade",
           "alt": "Copo da Felicidade",
           "imagem": "bp_oreo",
-          "precoUnitario": 15
-        }
-      ]
-    },
-    "sliceCake": {
-      "titulo": "Slice Cake",
-      "cor_principal": "#E0794C",
-      "sabores": [
-        {
-          "id": 21,
-          "nome": "Slice Cake",
-          "descricao": "Slice Cake",
-          "alt": "Slice Cake",
-          "imagem": "bp_pacoca",
           "precoUnitario": 15
         }
       ]

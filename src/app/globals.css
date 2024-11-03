@@ -39,31 +39,32 @@ html {
   scrollbar-color: var(--rosa-claro) var(--background);
 }
 
-.back-to-top {
-	position: fixed;
-	bottom: 2rem;
-	right: 2rem;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #F9AAC0;
-	border-radius: 50%;
-	padding: 0.5rem;
-	text-decoration: none;
-	transition: 0.2s ease-out;
+.scrollTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F9AAC0;
+  border-radius: 50%;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+  color: #fff;
+  font-size: 3rem;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.back-to-top span {
-	color: #fff;
-	font-size: 3rem;
-	transition: 0.2s ease-out;
+.scrollTop.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-.back-to-top:hover {
-	background-color: #DC5274;
-}
-.back-to-top:hover span {
-	transform: translateY(-4px);
+.scrollTop:hover {
+  background-color: #DC5274;
+  transform: translateY(-4px);
 }
 
 @layer utilities {

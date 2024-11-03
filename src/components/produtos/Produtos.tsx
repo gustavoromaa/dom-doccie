@@ -1,15 +1,12 @@
-import "./Produtos.css"
+import "./Produtos.css";
 
-import ContainerProdutos from "./ContainerProduto"
-import cardapio from "../../../cardapio.json"
+import cardapio from "../../../cardapio.json";
 import { ProdutoType } from "../../models/produto";
+import ContainerProdutos from "./ContainerProduto";
 
 import Image from "next/image";
-import brownie from "/public/produtos/brownie.webp"
-import boloNoPote from "/public/bolonopote.jpg"
 
-import { WindSong } from 'next/font/google'
-import { Poppins } from "next/font/google";
+import { Poppins, WindSong } from 'next/font/google';
 
 const windSong = WindSong({
     weight: '400',
@@ -48,8 +45,10 @@ export default function Produtos() {
                         <div className="nossos_doces_item">
                             <Image
                                 key={index}
+                                width={500}
+                                height={50}
                                 className="nossos_doces_img"
-                                src={boloNoPote}
+                                src={`/${produtos[key].imagem}.jpg`}
                                 alt={produtos[key].titulo}
                                 onClick={() => handleImageClick(index)}
                                 style={{ boxShadow: `9px 3px 0 -2px ${produtos[key].cor_principal}` }}

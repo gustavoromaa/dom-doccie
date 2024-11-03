@@ -1,9 +1,6 @@
-import { AiOutlineSend } from "react-icons/ai";
 import { Poppins } from "next/font/google";
-import { useState } from "react";
-import Carrinho from "../../app/carrinho/page";
-import { CarrinhoService } from "../../services/CarrinhoService";
 import { useCarrinho } from "../../context/CarrinhoContext";
+import { CarrinhoService } from "../../services/CarrinhoService";
 import BtnEnviarPedido from "../Botoes/BtnEnviarPedido";
 
 const poppins = Poppins({

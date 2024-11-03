@@ -1,6 +1,5 @@
-import Produto from './Produto'
-import cardapio from "./../../../cardapio.json"
 import { ProdutoType } from '../../models/produto';
+import Produto from './Produto';
 
 import { Poppins } from "next/font/google";
 
