@@ -54,14 +54,8 @@ export class CarrinhoService {
     this.salvarCarrinho();
   }
 
-  removerProduto(produto: SaboresType): void;
-  removerProduto(produtoId: number): void;
-  removerProduto(produtoOrId: SaboresType | number): void {
-    if (typeof produtoOrId === 'number') {
-      this.carrinho.produtos = this.carrinho.produtos.filter(p => p.id !== produtoOrId);
-    } else {
-      this.carrinho.produtos = this.carrinho.produtos.filter(p => p.id !== produtoOrId.id);
-    }
+  removerProduto(produtoId: number): void {
+    this.carrinho.produtos = this.carrinho.produtos.filter(p => p.id !== produtoId);
     this.salvarCarrinho();
   }
 

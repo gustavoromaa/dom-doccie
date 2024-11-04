@@ -13,7 +13,7 @@ import logoSlogan from "/public/doccieslogan.svg";
 import { Yrsa } from 'next/font/google';
 import { Poppins } from "next/font/google";
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const schibstedGrotesk = Yrsa({
   weight: ['400', '700'],
@@ -34,22 +34,24 @@ function backTop() {
   })
 }
 
-function addScrollEvent() {
+function addScrollEvent(setHeaderBgColor: (color: string) => void) {
   window.addEventListener('scroll', function () {
     let scroll = document.querySelector('.scrollTop')
     scroll?.classList.toggle('active', window.scrollY > 450)
+    setHeaderBgColor(window.scrollY > 450 ? '#F9AAC0' : '')
   })
 }
 
 export default function Home() {
+  const [headerBgColor, setHeaderBgColor] = useState('');
 
   useEffect(() => {
-    addScrollEvent()
+    addScrollEvent(setHeaderBgColor)
   }, [])
 
   return (
     <div>
-      <Header />
+      <Header backgroundColor={headerBgColor} />
 
       <div className={`slogan-container ${schibstedGrotesk.className}`}>
         <div className="slogan-content">
@@ -64,10 +66,13 @@ export default function Home() {
           </p>
 
           <div className="inciar_pedido">
-            <button className={`inicie_pedido ${poppins.className}`}>
-              Inicie seu pedido
-            </button>
+            <button onClick={() => {
+              document.querySelector('.cards')?.scrollIntoView({
+                behavior: 'smooth'
+              })
+            }} className={`inicie_pedido ${poppins.className}`}>Inicie seu pedido</button>
           </div>
+
         </div>
       </div>
 
@@ -84,6 +89,7 @@ export default function Home() {
         newestOnTop
         stacked
         closeOnClick
+        pauseOnHover={false}
         rtl={false}
         draggable
         theme="colored"

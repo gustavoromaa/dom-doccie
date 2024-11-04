@@ -6,11 +6,12 @@ header {
   width: 100%;
   padding: 0 10%;
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .headerbanana {
@@ -20,7 +21,6 @@ header {
   width: 100%;
   padding: 0 8%;
   box-sizing: border-box;
-  filter: drop-shadow(0px 6px 8px #000000);
 }
 
 .header_mobile {
@@ -84,67 +84,6 @@ header {
   transition: all 0.3s ease 0s;
   margin-left: auto;
   color: #fff;
-}
-
-.slogan-container {
-  display: flex;
-  text-align: center;
-  color: white;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  background-image: url('../../../public/bg.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  margin: 0;
-  position: relative;
-  z-index: 1;
-}
-
-.slogan-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  gap: .5rem;
-}
-
-.slogan-logo {
-  max-width: 100%;
-  height: auto;
-}
-
-.slogan-text {
-  color: var(--background);
-  font-size: 4.5rem;
-  width: 100%;
-  font-style: italic;
-  line-height: 4rem;
-  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.75);
-  margin: 0;
-}
-
-.inicie_pedido {
-  background-color: var(--rosa-claro);
-  font-size: 1.5rem;
-  font-weight: 300;
-  padding: 2px 80px;
-  border-radius: 10px;
-  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
-}
-
-.inicie_pedido:hover {
-  transform: scale(1.1);
-  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .highlighted-text {

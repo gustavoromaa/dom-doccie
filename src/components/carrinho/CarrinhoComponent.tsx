@@ -22,20 +22,9 @@ export default function CarrinhoComponent() {
     const [hasSummary, setHasSummary] = useState(true);
 
     const carrinho = CarrinhoService.getInstance();
-
-    // useEffect(() => {
-    //     const carrinho = CarrinhoService.getInstance();
-    //     console.log('Carrinho:', carrinho.listarProdutos());
-    //     // setHasSummary();
-    // }, []);
-
-    // console.log('hasSummary:', hasSummary);
-
     return (
         <div>
             <div className="carrinho_body">
-
-                <Header backgroundColor="var(--rosa-claro)" />
 
                 <div className={`carrinho_container ${!hasSummary ? 'full-width' : ''}`}>
 

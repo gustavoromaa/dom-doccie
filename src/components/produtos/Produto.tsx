@@ -51,7 +51,7 @@ export default function Produto({ id, categoria, nome, descricao, precoUnitario,
       <div className="doces_details">
         <h1 className={`titulo ${sagona.className}`}>{produto.nome}</h1>
         <h2 className={`card_produto_descricao ${poppins.className}`}>{produto.descricao}</h2>
-        <h1 className={`card_produto_valor ${poppins.className}`}>R${produto.precoUnitario}</h1>
+        <h1 className={`card_produto_valor ${poppins.className}`}>R${produto.precoUnitario.toFixed(2)}</h1>
       </div>
 
       <div className={`${poppins.className}`}><BtnAdicionarCarrinho {...produto} /></div>

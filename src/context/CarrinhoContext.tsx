@@ -7,6 +7,7 @@ interface CarrinhoContextType {
     valorCarrinho: number;
     quantidadeTotal: number;
     atualizarCarrinho: () => void;
+    removerProduto: (id: number) => void;
 }
 
 const CarrinhoContext = createContext<CarrinhoContextType | undefined>(undefined);
@@ -25,14 +26,19 @@ export const CarrinhoProvider: React.FC<{ children: ReactNode }> = ({ children }
         setQuantidadeTotal(carrinhoService.getQtndTotal());
     };
 
+    const removerProduto = (id: number) => {
+        carrinhoService.removerProduto(id);
+        atualizarCarrinho();
+    }
+
     useEffect(() => {
         atualizarCarrinho();
-    })
+    }, []);
 
     return (
-        <CarrinhoContext.Provider value={{ produtos, valorCarrinho, quantidadeTotal, atualizarCarrinho }}>
+        <CarrinhoContext.Provider value={{ produtos, valorCarrinho, quantidadeTotal, atualizarCarrinho, removerProduto }}>
             {children}
-            </CarrinhoContext.Provider>
+        </CarrinhoContext.Provider>
     )
 }
 

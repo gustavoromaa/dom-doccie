@@ -33,7 +33,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.3rem;
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
@@ -42,6 +41,7 @@
   text-align: center;
   margin-right: 90px;
   width: auto;
+  gap: 1rem;
 }
 
 .card:hover {
@@ -66,6 +66,12 @@
   gap: 1rem;
   justify-content: center;
   align-content: center;
+}
+
+.nossos_opcoes_desc {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
 .card_produto_descricao {

@@ -28,7 +28,7 @@ export default function Produtos() {
             container.scrollIntoView({ behavior: 'smooth' });
             setTimeout(() => {
                 const containerRect = container.getBoundingClientRect();
-                window.scrollBy(0, containerRect.top - -10);
+                window.scrollBy(0, containerRect.top - 100);
             });
         }
     };
@@ -37,8 +37,10 @@ export default function Produtos() {
         <div>
             <div className="nossos_doces_separator_container">
             </div>
-            <div className="nossos_doces_opcoes_container">
-                <h1 className={`${windSong.className}`}>Nossos Doces</h1>
+            <div id="opcoes" className="nossos_doces_opcoes_container">
+                <h1 className={`${windSong.className}`}>Nossos <span>D</span>oces</h1>
+
+                <p className={`nossos_opcoes_desc ${poppins.className}`}>Selecione um produto e faça seu pedido</p>
 
                 <div className="nossos_doces_opcoes">
                     {Object.keys(produtos).map((key, index) => (

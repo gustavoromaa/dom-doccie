@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ProdutoCarrinhoType } from "../../models/carrinho";
 import { Poppins } from "next/font/google";
 import { CarrinhoService } from "../../services/CarrinhoService";

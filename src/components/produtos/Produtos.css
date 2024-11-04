@@ -8,12 +8,25 @@
     align-items: center;
     width: 80%;
     max-width: 60%;
-    height: 720px;
+    height: 98vh;
     padding: 1rem;
+    gap: 1rem;
 }
 
 .nossos_doces_opcoes_container h1 {
     font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 1px;
+    color: var(--marrom);
+}
+
+.nossos_doces_opcoes_container span {
+    color: var(--rosa-claro);
+}
+
+.nossos_opcoes_desc {
+    font-weight: 400;
+    font-size: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -21,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.4rem;
+    gap: 2rem;
     width: 80%;
     flex-wrap: nowrap;
 }

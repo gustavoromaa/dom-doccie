@@ -14,12 +14,20 @@ const poppins = Poppins({
 export default function ItemCarrinho({ item }: { item: ProdutoCarrinhoType }) {
     const [quantidade, setQuantidade] = useState(item.quantidade);
     const [precoTotal, setPrecoTotal] = useState(item.precoTotal);
-    const { atualizarCarrinho } = useCarrinho();
+    const { removerProduto, atualizarCarrinho, produtos } = useCarrinho();
 
     useEffect(() => {
         setPrecoTotal(item.precoUnitario * quantidade);
-        atualizarCarrinho();
-    }, [quantidade, item.precoUnitario, atualizarCarrinho]);
+    }, [quantidade, item.precoUnitario]);
+
+    useEffect(() => {
+        setQuantidade(item.quantidade);
+        setPrecoTotal(item.precoTotal);
+    }, [produtos]);
+
+    const handleRemoverProduto = () => {
+        removerProduto(item.id!);
+    }
 
     return (
         <div className="carrinho_list__products_item">
@@ -39,7 +47,7 @@ export default function ItemCarrinho({ item }: { item: ProdutoCarrinhoType }) {
             <p className={`valor ${poppins.className}`}>R$ <span className="carrinho_produto_preco">{precoTotal?.toFixed(2)}</span></p>
 
             <div className="remove__item">
-                <button className="btnRemove_item">
+                <button className="btnRemove_item" onClick={handleRemoverProduto}>
                     <FaTrashCan />
                 </button>
             </div>
