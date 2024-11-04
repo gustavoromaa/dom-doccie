@@ -7,7 +7,7 @@
       "sabores": [
         {
           "id": 1,
-          "nome": "Brigadeiro c/ Morango",
+          "nome": "Bolo no pote de Brigadeiro c/ Morango",
           "descricao": "Bolo de Baunilha, Morango, Brigadeiro de Chocolate ou Brigadeiro de Ninho",
           "alt": "Bolo no pote",
           "imagem": "bp_brigadeiroMorango",
@@ -15,7 +15,7 @@
         },
         {
           "id": 2,
-          "nome": "Brigadeiro Branco c/ Uva",
+          "nome": "Bolo no Pote de Brigadeiro Branco c/ Uva",
           "descricao": "chocolate branco com bombom ouro branco",
           "alt": "Bolo no pote",
           "imagem": "bp_brigadeiroBrancoUva",
@@ -23,7 +23,7 @@
         },
         {
           "id": 3,
-          "nome": "Ouro branco",
+          "nome": "Bolo no Pote de Ouro branco",
           "descricao": "Bolo de Baunilha, Bombom Ouro Branco, Brigadeiro branco",
           "alt": "Bolo no pote",
           "imagem": "bp_ouroBranco",
@@ -31,7 +31,7 @@
         },
         {
           "id": 4,
-          "nome": "Sonho de Valsa",
+          "nome": "Bolo no Pote de Sonho de Valsa",
           "descricao": "Bolo de Chocolate, Sonho de Valsa, Brigadeiro de Chocolate",
           "alt": "Bolo no pote",
           "imagem": "bp_sonhoDeValsa",
@@ -39,7 +39,7 @@
         },
         {
           "id": 5,
-          "nome": "Prestígio",
+          "nome": "Bolo no Pote de Prestígio",
           "descricao": "Bolo de Baunilha, Coco ralado, Brigadeiro de Chocolate",
           "alt": "Bolo no pote",
           "imagem": "bp_prestigio",
@@ -47,7 +47,7 @@
         },
         {
           "id": 6,
-          "nome": "Maracujá",
+          "nome": "Bolo no Pote de Maracujá",
           "descricao": "Bolo de Baunilha ou Chocolate, Brigadeiro de Maracujá ou Chocolate, Geleia Artesanal de Maracujá",
           "alt": "Bolo no pote",
           "imagem": "bp_maracuja",
@@ -55,7 +55,7 @@
         },
         {
           "id": 7,
-          "nome": "Amendoim/Shot",
+          "nome": "Bolo no Pote de Amendoim/Shot",
           "descricao": "Bolo de Chocolate, Chocolate Shot, Amendoim, Brigadeiro de Chocolate",
           "alt": "Bolo no pote",
           "imagem": "bp_amendoim",
@@ -63,7 +63,7 @@
         },
         {
           "id": 8,
-          "nome": "Oreo",
+          "nome": "Bolo no Pote de Oreo",
           "descricao": "Bolo de Baunilha, Brigadeiro de Oreo, Biscoito Oreo",
           "alt": "Bolo no pote",
           "imagem": "bp_oreo",
@@ -71,7 +71,7 @@
         },
         {
           "id": 9,
-          "nome": "Kit Kat",
+          "nome": "Bolo no Pote de Kit Kat",
           "descricao": "Bolo de Chocolate ou Baunilha, KitKat Branco ou Preto, Brigadeiro de Chocolate ou Brigadeiro Branco",
           "alt": "Bolo no pote",
           "imagem": "bp_kitkat",
@@ -86,64 +86,72 @@
       "sabores": [
         {
           "id": 10,
-          "nome": "Brigadeiro",
-          "descricao": "Chocolate ao leite com granulado",
+          "nome": "Bombom de Uva",
+          "descricao": "Chocolate nobre com brigadeiro cremoso de ninho e uva",
           "alt": "Bombom",
           "imagem": "bp_chocolate",
           "precoUnitario": 15
         },
         {
           "id": 11,
-          "nome": "Brigadeiro c/ Morango",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Bombom de Morango",
+          "descricao": "Chocolate nobre com brigadeiro cremoso de chocolate e morango",
           "alt": "Bombom",
           "imagem": "bp_chocolate",
           "precoUnitario": 15
         },
         {
           "id": 12,
-          "nome": "Brigadeiro Branco c/ Uva",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Bombom de Maracujá",
+          "descricao": "Chocolate nobre com brigadeiro cremoso de maracujá e geleia artesanal de maracujá",
           "alt": "Bombom",
           "imagem": "bp_chocolate",
           "precoUnitario": 15
         },
         {
           "id": 13,
-          "nome": "Beijinho",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Bombom de Prestígio",
+          "descricao": "Chocolate nobre com brigadeiro de prestígio",
           "alt": "Bombom",
           "imagem": "bp_chocolate",
           "precoUnitario": 15
         },
         {
           "id": 14,
-          "nome": "Maracujá",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Bombom de Ferrero Rocher",
+          "descricao": "Chocolate nobre com brigadeiro cremoso de ferrero rocher, creme de avelã e amendoim",
           "alt": "Bombom",
           "imagem": "bp_chocolate",
           "precoUnitario": 15
         },
         {
           "id": 15,
-          "nome": "Amendoim",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Bombom de Beijinho",
+          "descricao": "Chocolate nobre com brigadeiro de beijinho",
           "alt": "Bombom",
           "imagem": "bp_chocolate",
           "precoUnitario": 15
         },
         {
           "id": 16,
-          "nome": "Ferrero Rocher",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Bombom de Dois Amores",
+          "descricao": "Chocolate nobre com brigadeiro cremoso de chocolate e chocolate branco",
           "alt": "Bombom",
           "imagem": "bp_chocolate",
           "precoUnitario": 15
         },
         {
           "id": 17,
-          "nome": "Dois Amores",
-          "descricao": "Chocolate branco com bombom ouro branco",
+          "nome": "Bombom de M&M",
+          "descricao": "Chocolate nobre com brigadeiro cremoso de chocolate e M&Ms",
+          "alt": "Bombom",
+          "imagem": "bp_chocolate",
+          "precoUnitario": 15
+        },
+        {
+          "id": 18,
+          "nome": "Bombom de Paçoca",
+          "descricao": "Chocolate nobre com brigadeiro cremoso de paçoca",
           "alt": "Bombom",
           "imagem": "bp_chocolate",
           "precoUnitario": 15
@@ -156,9 +164,81 @@
       "imagem": "brownie",
       "sabores": [
         {
-          "id": 18,
-          "nome": "Brownie",
-          "descricao": "Chocolate ao leite com granulado",
+          "id": 19,
+          "nome": "Brownie de Morango",
+          "descricao": "Fatia de brownie com brigadeiro de chocolate ou brigadeiro branco e morango",
+          "alt": "Brownie",
+          "imagem": "bp_chocolate",
+          "precoUnitario": 15
+        },
+        {
+          "id": 20,
+          "nome": "Brownie de Ouro Branco",
+          "descricao": "Fatia de brownie com brigadeiro branco e bombom ouro branco",
+          "alt": "Brownie",
+          "imagem": "bp_chocolate",
+          "precoUnitario": 15
+        },
+        {
+          "id": 21,
+          "nome": "Brownie de Sonho de Valsa",
+          "descricao": "Fatia de brownie com brigadeiro de chocolate e bombom sonho de valsa",
+          "alt": "Brownie",
+          "imagem": "bp_chocolate",
+          "precoUnitario": 15
+        },
+        {
+          "id": 22,
+          "nome": "Brownie de Prestígio",
+          "descricao": "Fatia de Brownie com brigadeiro de prestígio",
+          "alt": "Brownie",
+          "imagem": "bp_chocolate",
+          "precoUnitario": 15
+        },
+        {
+          "id": 23,
+          "nome": "Brownie de Uva",
+          "descricao": "Fatia de Brownie com brigadeiro branco e uva",
+          "alt": "Brownie",
+          "imagem": "bp_chocolate",
+          "precoUnitario": 15
+        },
+        {
+          "id": 24,
+          "nome": "Brownie de M&M",
+          "descricao": "Fatia de Brownie com brigadeiro de chocolate e M&Ms",
+          "alt": "Brownie",
+          "imagem": "bp_chocolate",
+          "precoUnitario": 15
+        },
+        {
+          "id": 25,
+          "nome": "Brownie de Ferrero Rocher",
+          "descricao": "Fatia de Brownie com brigadeiro de Ferreiro Rocher com creme de avelã e amendoim",
+          "alt": "Brownie",
+          "imagem": "bp_chocolate",
+          "precoUnitario": 15
+        },
+        {
+          "id": 26,
+          "nome": "Brownie de Kit Kat",
+          "descricao": "Fatia de Brownie com brigadeiro de chocolate ou brigadeiro branco e kit kat preto ou branco",
+          "alt": "Brownie",
+          "imagem": "bp_chocolate",
+          "precoUnitario": 15
+        },
+        {
+          "id": 27,
+          "nome": "Brownie de Oreo com Laka",
+          "descricao": "Fatia de Brownie com brigadeiro branco, biscoito oreo e chocolate branco laka",
+          "alt": "Brownie",
+          "imagem": "bp_chocolate",
+          "precoUnitario": 15
+        },
+        {
+          "id": 28,
+          "nome": "Brownie de Maracujá.",
+          "descricao": "Fatia de Brownie com brigadeiro de maracujá e geleia artesanal de maracujá",
           "alt": "Brownie",
           "imagem": "bp_chocolate",
           "precoUnitario": 15
@@ -171,9 +251,25 @@
       "imagem": "copodafelicidade",
       "sabores": [
         {
-          "id": 20,
-          "nome": "Copo da Felicidade",
-          "descricao": "Copo da Felicidade",
+          "id": 29,
+          "nome": "Copo da felicidade de Morango",
+          "descricao": "Pedaços de brownie com brigadeiro cremoso de chocolate ou leite ninho, suspiro, creme de avelã, chantilly e morango",
+          "alt": "Copo da Felicidade",
+          "imagem": "bp_oreo",
+          "precoUnitario": 15
+        },
+        {
+          "id": 30,
+          "nome": "Copo da felicidade de Uva",
+          "descricao": "Pedaços de brownie com brigadeiro cremoso de leite ninho, suspiro, creme de avelã, chantilly e uva",
+          "alt": "Copo da Felicidade",
+          "imagem": "bp_oreo",
+          "precoUnitario": 15
+        },
+        {
+          "id": 31,
+          "nome": "Copo da felicidade de Sonho de Valsa",
+          "descricao": "Pedaços de brownie com brigadeiro cremoso de chocolate, bombom de sonho de valsa, suspiro, creme de avelã e chantilly",
           "alt": "Copo da Felicidade",
           "imagem": "bp_oreo",
           "precoUnitario": 15

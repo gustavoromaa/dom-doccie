@@ -1,8 +1,9 @@
-import { toast, Slide } from 'react-toastify';
-import { CarrinhoService } from '../../services/CarrinhoService';
-import { SaboresType } from '../../models/sabores';
+import "../produtos/Produto.css";
+
+import { Slide, toast } from 'react-toastify';
 import { ProdutoCarrinhoType } from '../../models/carrinho';
-import { ProdutoType } from '../../models/produto';
+import { SaboresType } from '../../models/sabores';
+import { CarrinhoService } from '../../services/CarrinhoService';
 
 export default function BtnAdicionarCarrinho(produto: SaboresType) {
 
@@ -30,7 +31,7 @@ export default function BtnAdicionarCarrinho(produto: SaboresType) {
 
     return (
         <>
-            <button onClick={adicionarAoCarrinho} className="add_cart" style={{ backgroundColor: produto.cor_principal }}>Adicionar ao carrinho</button>
+            <button onClick={adicionarAoCarrinho} className="add_cart" style={{ backgroundColor: produto.cor_principal}}>Adicionar ao carrinho</button>
         </>
     )
 }

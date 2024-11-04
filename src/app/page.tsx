@@ -11,6 +11,8 @@ import Produtos from "../components/produtos/Produtos";
 import logoSlogan from "/public/doccieslogan.svg";
 
 import { Yrsa } from 'next/font/google';
+import { Poppins } from "next/font/google";
+
 import { useEffect } from 'react';
 
 const schibstedGrotesk = Yrsa({
@@ -20,7 +22,10 @@ const schibstedGrotesk = Yrsa({
   display: 'swap',
 })
 
-
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+});
 
 function backTop() {
   window.scrollTo({
@@ -57,6 +62,12 @@ export default function Home() {
             Doces momentos para
             <span className={`highlighted-text ${schibstedGrotesk.className}`}> Compartilhar</span>
           </p>
+
+          <div className="inciar_pedido">
+            <button className={`inicie_pedido ${poppins.className}`}>
+              Inicie seu pedido
+            </button>
+          </div>
         </div>
       </div>
 

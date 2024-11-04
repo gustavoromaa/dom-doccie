@@ -65,6 +65,11 @@
     width: 200px;
 }
 
+.h1p h1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
 .containerContador {
     display: flex;
     align-self: center;
