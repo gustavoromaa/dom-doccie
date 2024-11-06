@@ -24,10 +24,10 @@ function CarrinhoPageContent() {
 
 export default function Carrinho() {
     return (
-        <CarrinhoProvider>
-            <Header backgroundColor="var(--rosa-claro)" />
-            <CarrinhoPageContent />
-            <Footer/>
-        </CarrinhoProvider>
+            <CarrinhoProvider>
+                <Header backgroundColor="var(--rosa-claro)" />
+                <CarrinhoPageContent />
+                <Footer/>
+            </CarrinhoProvider>
     );
 }

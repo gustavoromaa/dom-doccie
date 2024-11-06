@@ -3,9 +3,11 @@ import { useCarrinho } from "../../context/CarrinhoContext";
 
 export default function BtnEnviarPedido() {
 
+    const nome = localStorage.getItem('nome');
+
     const { produtos, valorCarrinho } = useCarrinho();
 
-    let message = "👋 Olá!\n Me chamo *Banana* e gostaria de fazer um pedido:\n\n" +
+    let message = `👋 Olá!\n Me chamo *${nome}* e gostaria de fazer um pedido:\n\n` +
         "🍫 Itens\n" +
         produtos.map((produto) => (
             `• ${produto.quantidade} x ${produto.nome} *(R$${produto.precoTotal?.toFixed(2)})*\n`

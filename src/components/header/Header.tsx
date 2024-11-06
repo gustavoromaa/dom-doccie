@@ -31,7 +31,7 @@ const NavLink = ({ href, children }) => {
 
 export default function Header({ backgroundColor }: { backgroundColor: string }) {
     return (
-        <header style={{ backgroundColor: backgroundColor }}>
+        <div className="header" style={{ backgroundColor: backgroundColor }}>
             <div className="headerbanana">
                 <NavLink href="/">
                     <div className="logo">
@@ -52,6 +52,6 @@ export default function Header({ backgroundColor }: { backgroundColor: string })
                     <button className="btnbag"><BsBag /></button>
                 </NavLink>
             </div>
-        </header>
+        </div>
     );
 }

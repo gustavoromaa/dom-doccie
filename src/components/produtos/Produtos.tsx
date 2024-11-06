@@ -48,9 +48,9 @@ export default function Produtos() {
                             <Image
                                 key={index}
                                 width={500}
-                                height={50}
+                                height={500}
                                 className="nossos_doces_img"
-                                src={`/${produtos[key].imagem}.jpg`}
+                                src={`/${produtos[key].imagem}.png`}
                                 alt={produtos[key].titulo}
                                 onClick={() => handleImageClick(index)}
                                 style={{ boxShadow: `9px 3px 0 -2px ${produtos[key].cor_principal}` }}

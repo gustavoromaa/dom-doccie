@@ -62,7 +62,9 @@ export default function Home() {
           />
           <p className="slogan-text">
             Doces momentos para
-            <span className={`highlighted-text ${schibstedGrotesk.className}`}> Compartilhar</span>
+            <span className={`highlighted-text ${schibstedGrotesk.className}`}> 
+              Compartilhar
+              </span>
           </p>
 
           <div className="inciar_pedido">
@@ -70,7 +72,9 @@ export default function Home() {
               document.querySelector('.cards')?.scrollIntoView({
                 behavior: 'smooth'
               })
-            }} className={`inicie_pedido ${poppins.className}`}>Inicie seu pedido</button>
+            }} className={`inicie_pedido ${poppins.className}`}>
+              Inicie seu pedido
+              </button>
           </div>
 
         </div>

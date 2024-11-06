@@ -1,10 +1,10 @@
-header {
+.header {
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0 10%;
+  padding: 0 22%;
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -19,7 +19,6 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0 8%;
   box-sizing: border-box;
 }
 

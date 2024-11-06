@@ -35,7 +35,7 @@ const poppins = Poppins({
   subsets: ['latin'],
 });
 
-export default function Produto({ id, categoria, nome, descricao, precoUnitario, cor_principal, imagem, alt}: SaboresType) {
+export default function Produto({ id, categoria, nome, descricao, precoUnitario, cor_principal, imagem, alt }: SaboresType) {
   const produto = { id, categoria, nome, descricao, precoUnitario, cor_principal, imagem, alt };
 
   return (
@@ -47,14 +47,15 @@ export default function Produto({ id, categoria, nome, descricao, precoUnitario,
         height={150}
         className="card_image"
       />
-
+  
       <div className="doces_details">
-        <h1 className={`titulo ${sagona.className}`}>{produto.nome}</h1>
+        <h1 className={`card_produto_titulo ${sagona.className}`}>{produto.nome}</h1>
         <h2 className={`card_produto_descricao ${poppins.className}`}>{produto.descricao}</h2>
-        <h1 className={`card_produto_valor ${poppins.className}`}>R${produto.precoUnitario.toFixed(2)}</h1>
+        <h1 className={`card_produto_valor ${poppins.className}`} style={{ color: cor_principal }}>R${produto.precoUnitario.toFixed(2)}</h1>
       </div>
-
-      <div className={`${poppins.className}`}><BtnAdicionarCarrinho {...produto} /></div>
+      <div className={`doces_footer ${poppins.className}`}>
+        <BtnAdicionarCarrinho {...produto} />
+        </div>
     </div>
   );
 }
