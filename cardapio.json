@@ -256,7 +256,7 @@
           "descricao": "Pedaços de brownie com brigadeiro cremoso de chocolate ou leite ninho, suspiro, creme de avelã, chantilly e morango",
           "alt": "Copo da Felicidade",
           "imagem": "bp_oreo",
-          "precoUnitario": 15
+          "precoUnitario": 20
         },
         {
           "id": 30,
@@ -264,7 +264,7 @@
           "descricao": "Pedaços de brownie com brigadeiro cremoso de leite ninho, suspiro, creme de avelã, chantilly e uva",
           "alt": "Copo da Felicidade",
           "imagem": "bp_oreo",
-          "precoUnitario": 15
+          "precoUnitario": 20
         },
         {
           "id": 31,
@@ -272,7 +272,7 @@
           "descricao": "Pedaços de brownie com brigadeiro cremoso de chocolate, bombom de sonho de valsa, suspiro, creme de avelã e chantilly",
           "alt": "Copo da Felicidade",
           "imagem": "bp_oreo",
-          "precoUnitario": 15
+          "precoUnitario": 20
         }
       ]
     }

@@ -14,7 +14,8 @@
     justify-content: center;
     gap: 2rem;
     border-radius: 0.5rem;
-    max-width: 100%
+    max-width: 100%;
+     transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .carrinho_list__products {
@@ -24,7 +25,6 @@
     align-self: flex-start;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
-    background-color: var(--rosa-claro);
     -webkit-box-shadow: 0px 3px 21px -6px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 3px 21px -6px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 3px 21px -6px rgba(0, 0, 0, 0.75);
@@ -33,9 +33,15 @@
 .carrinho_list__products_header {
     color: #fff;
     gap: 1rem;
+    width: 100%;
     padding: 3px;
-    margin-left: 75px;
     font-size: 1.1rem;
+    background-color: #f9aac0;
+    border-radius: 0.5rem 0.5rem 0 0 ;
+}
+
+.texto {
+    margin-left: 65px;
 }
 
 .carrinho_list__products_products {
@@ -147,22 +153,24 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
     padding: 12px;
 }
 
-.moto,
-.casa {
+.moto {
     color: #ACA8A9;
     font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .header_icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
+     transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
     width: 100%;
 }
 
@@ -170,6 +178,7 @@
     border-radius: 100%;
     padding: .1rem;
     border: 2px solid #ACA8A9;
+     transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .checkbox_fill {
@@ -177,24 +186,39 @@
     padding: .42rem;
     border: 2px solid #ACA8A9;
     background-color: #ACA8A9;
+    opacity: 0;
+     transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.active .delivery,
+.active .header_icons,
+.active .moto,
+.active .checkbox_border,
+.active .checkbox_fill {
+    color: var(--rosa-claro);
+    border-color: var(--rosa-claro);
+}
+
+.active .checkbox_fill {
+    opacity: 1;
+    background-color: var(--rosa-claro);
 }
 
 .delivery:active,
 .checkbox_border:active,
-.moto:active {
-    border-color: #F9AAC0;
-    color: #F9AAC0;
+.moto:active{
+    border-color: var(--rosa-claro);
+    color: var(--rosa-claro);
 }
 
 .checkbox_fill:active {
     border-radius: 100%;
     padding: .42rem;
-    border: 2px solid #F9AAC0;
-    background-color: #F9AAC0;
+    border: 2px solid var(--rosa-claro);
+    background-color: var(--rosa-claro);
 }
 
-.delivery,
-.retirada {
+.delivery {
     border: 1.5px solid #ACA8A9;
     border-radius: 10px;
     display: flex;
@@ -247,6 +271,7 @@
     width: 100%;
     padding: 1.4rem;
     border-radius: 0 0 0.5rem 0.5rem;
+     transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .h1popcoes h1 {
@@ -288,4 +313,86 @@
     font-size: 1.2rem;
     color: #fff;
     font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+    .carrinho_body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .carrinho_container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .carrinho_list__products,
+    .carrinho_summary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .carrinho_list__products_item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .carrinho_list__products_item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .h1p {
+        width: 100%;
+    }
+
+    .valor {
+        width: auto;
+        text-align: left;
+    }
+
+    .remove__item {
+        padding: 5px 10px;
+        font-size: 1rem;
+    }
+
+    .btnSend {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header_carrinho_delivery,
+    .header_icons,
+    .header_carrinho_summary {
+        font-size: 1rem;
+        padding: 3px;
+    }
+
+    .container_opcoes,
+    .bodyteste {
+        padding: 10px;
+    }
+
+    .delivery {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .qtndItem,
+    .formRece {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .total {
+        font-size: 1.2rem;
+    }
+
+    .btnSend button {
+        font-size: 1rem;
+    }
 }

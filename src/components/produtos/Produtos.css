@@ -104,7 +104,7 @@
     }
 
     .nossos_doces_opcoes {
-        gap: 1rem;
+        gap: 3rem;
     }
 
     .nossos_doces_img {
@@ -126,7 +126,7 @@
 
     .nossos_doces_opcoes {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: 2em;
     }
 
     .nossos_doces_img {

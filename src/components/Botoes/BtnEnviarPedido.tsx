@@ -4,6 +4,7 @@ import { useCarrinho } from "../../context/CarrinhoContext";
 export default function BtnEnviarPedido() {
 
     const nome = localStorage.getItem('nome');
+    const tipoEntrega = localStorage.getItem('tipoEntrega')!;
 
     const { produtos, valorCarrinho } = useCarrinho();
 
@@ -14,8 +15,7 @@ export default function BtnEnviarPedido() {
         )).join('') +
         "\n" +
         `➡️ Valor *total* dos itens: *R$${valorCarrinho.toFixed(2)}*\n\n` +
-        "➡️ *Modo de envio:* Entrega\n" +
-        "📍*Endereço:* Rua Bananilson Farofa, 234, Guarani";
+        `➡️ *Modo de envio:* ${tipoEntrega}\n`
 
     function onClick() {
         const encodedMessage = encodeURIComponent(message);

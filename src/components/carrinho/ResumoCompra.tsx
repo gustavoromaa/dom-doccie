@@ -1,8 +1,13 @@
+'use client';
+
 import { Poppins } from "next/font/google";
 import { useCarrinho } from "../../context/CarrinhoContext";
 import BtnEnviarPedido from "../Botoes/BtnEnviarPedido";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 import { RiMapPin2Line } from "react-icons/ri";
+import { useEffect, useState } from "react";
+import TipoEntrega from "./tipoEntrega";
+import { motion, AnimatePresence } from 'framer-motion';
 
 const poppins = Poppins({
     weight: ['300', '500', '700'],
@@ -11,7 +16,18 @@ const poppins = Poppins({
 
 export default function ResumoCompra() {
 
+    const [tipoEntrega, setTipoEntrega] = useState('');
+
     const { valorCarrinho, quantidadeTotal } = useCarrinho();
+
+    function definirTipoEntrega(tipo: string){
+        localStorage.setItem('tipoEntrega', tipo);
+        setTipoEntrega(tipo);
+    }
+
+    useEffect(() => {
+        setTipoEntrega(localStorage.getItem('tipoEntrega') || 'Entrega');
+    }, []);
 
     return (
         <div className="carrinho_summary">
@@ -27,17 +43,40 @@ export default function ResumoCompra() {
                             <p>Quantidade de itens</p>
                             {
                                 quantidadeTotal >= 1 ? (
-                                    <p>
+                                    <motion.p
+                                        key={quantidadeTotal}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ duration: 0.5 }}
+                                    >
                                         {quantidadeTotal} {quantidadeTotal === 1 ? 'item' : 'itens'}
-                                    </p>
+                                    </motion.p>
                                 ) : (
-                                    <p>0 itens</p>
+                                    <motion.p
+                                        key={quantidadeTotal}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        0 itens
+                                    </motion.p>
                                 )
                             }
                         </div>
                         <div className="formRece">
                             <p>Forma de recebimento</p>
-                            <p style={{ fontWeight: 400 }}>Entrega</p>
+                            <AnimatePresence mode="wait">
+                                <motion.p
+                                    key={tipoEntrega}
+                                    style={{ fontWeight: 400 }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.2 }}
+                                >
+                                    {tipoEntrega}
+                                </motion.p>
+                            </AnimatePresence>
                         </div>
                     </div>
 
@@ -59,43 +98,9 @@ export default function ResumoCompra() {
                 </div>
 
                 <div className="container_opcoes">
-                    <div className="delivery">
-
-                        <div className="header_icons">
-                            <div className="moto">
-                                <MdOutlineDeliveryDining />
-                            </div>
-
-                            <div className="checkbox">
-                                <div className="checkbox_border">
-                                    <div className="checkbox_fill">
-                                        {/* .aa */}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="h1popcoes">
-                            <h1>Delivery</h1>
-                            <p>A entrega será realizada por meio de um aplicativo de entrega.</p>
-                        </div>
-
-                    </div>
-
-                    <div className="retirada">
-
-                        <div className="casa">
-                            <RiMapPin2Line />
-                        </div>
-
-                        <div className="h1popcoes">
-                            <h1>Retirada</h1>
-                            <p>A entrega será realizada por meio de um aplicativo de entrega.</p>
-                        </div>
-
-                    </div>
+                    <TipoEntrega icone={<MdOutlineDeliveryDining />} titulo="Entrega" descricao="A entrega será realizada por meio de um aplicativo de entrega." ativo={tipoEntrega === "Entrega"} onClick={() => definirTipoEntrega("Entrega")} />
+                    <TipoEntrega icone={<RiMapPin2Line />} titulo="Retirada" descricao="A entrega será realizada por meio de um local de retirada definido." ativo={tipoEntrega === "Retirada"} onClick={() => definirTipoEntrega("Retirada")}/>
                 </div>
-
             </div>
         </div>
     )

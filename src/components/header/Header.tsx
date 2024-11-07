@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import logo from "/public/Doccie.svg"
 import logoCor from "/public/logoComCor.svg"
-import {Tooltip} from "@nextui-org/react";
+import { Tooltip } from "@nextui-org/react";
 
 import "./header.css"
 
@@ -20,23 +20,37 @@ const windSong = WindSong({
 
 export default function Header({ className, style }: { className: string, style: any }) {
     return (
-        <div className={`header_background ${className}` } style={style}>
-            <div className="header_container">
-                <Link href="/">
+        <div>
+            <div className={`header_mobile ${className}`} style={style}>
+                <div className="header_mobile_container">
+                    <Link href="/">
                         <Image
                             src={logoCor}
                             alt="logo"
                             className="header_icon"
                         />
-                </Link>
-
+                    </Link>
+                    <Link href="/carrinho">
+                        <BsBag className="header_icon_cart" />
+                    </Link>
+                </div>
+            </div>
+            <div className={`header_background ${className}`} style={style}>
+                <div className="header_container">
+                    <Link href="/">
+                        <Image
+                            src={logoCor}
+                            alt="logo"
+                            className="header_icon"
+                        />
+                    </Link>
                     <Link href="/">
                         <button className={`header_logo ${windSong.className}`}>Dom Docciê</button>
                     </Link>
-
-                <Link href="/carrinho">
+                    <Link href="/carrinho">
                         <BsBag className="header_icon_cart" />
-                </Link>
+                    </Link>
+                </div>
             </div>
         </div>
     );
