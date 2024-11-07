@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 87vh;
+    width: 100%;
     background-color: #EDEDED;
 }
 
@@ -13,10 +14,12 @@
     justify-content: center;
     gap: 2rem;
     border-radius: 0.5rem;
+    max-width: 100%
 }
 
 .carrinho_list__products {
     width: 53rem;
+    max-width: 100%;
     height: auto;
     align-self: flex-start;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -48,7 +51,7 @@
     width: 100%;
     padding: 20px 0 20px 75px;
     border-bottom: 0.1px solid rgba(0, 0, 0, 0.13);
-    flex: 1 0 auto; 
+    flex: 1 0 auto;
 }
 
 .carrinho_list__products_item img {
@@ -68,37 +71,6 @@
 .h1p h1 {
     font-size: 1.2rem;
     font-weight: 400;
-}
-
-.containerContador {
-    display: flex;
-    align-self: center;
-}
-
-.contador {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-    border: 2px solid #0000007e;
-    padding: 5px 15px;
-    border-radius: 5px;
-}
-
-.menos {
-    color: #0000006b;
-    font-size: 1.3rem;
-}
-
-.contador p {
-    font-size: 1.2rem;
-    width: 2rem;
-    text-align: center;
-}
-
-.mais {
-    color: var(--rosa-claro);
-    font-size: 1.3rem;
 }
 
 .valor {
@@ -148,6 +120,7 @@
     width: 100px;
     text-align: right;
 }
+
 .carrinho_cart__summary {
     height: 15.2rem;
 }
@@ -181,6 +154,43 @@
 .casa {
     color: #ACA8A9;
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.checkbox_border {
+    border-radius: 100%;
+    padding: .1rem;
+    border: 2px solid #ACA8A9;
+}
+
+.checkbox_fill {
+    border-radius: 100%;
+    padding: .42rem;
+    border: 2px solid #ACA8A9;
+    background-color: #ACA8A9;
+}
+
+.delivery:active,
+.checkbox_border:active,
+.moto:active {
+    border-color: #F9AAC0;
+    color: #F9AAC0;
+}
+
+.checkbox_fill:active {
+    border-radius: 100%;
+    padding: .42rem;
+    border: 2px solid #F9AAC0;
+    background-color: #F9AAC0;
 }
 
 .delivery,
@@ -279,4 +289,3 @@
     color: #fff;
     font-weight: 300;
 }
-

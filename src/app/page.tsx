@@ -38,12 +38,12 @@ function addScrollEvent(setHeaderBgColor: (color: string) => void) {
   window.addEventListener('scroll', function () {
     let scroll = document.querySelector('.scrollTop')
     scroll?.classList.toggle('active', window.scrollY > 450)
-    setHeaderBgColor(window.scrollY > 450 ? '#F9AAC0' : '')
+    setHeaderBgColor(window.scrollY > 450 ? 'rosa-claro' : 'transparent')
   })
 }
 
 export default function Home() {
-  const [headerBgColor, setHeaderBgColor] = useState('');
+  const [headerBgColor, setHeaderBgColor] = useState('transparent');
 
   useEffect(() => {
     addScrollEvent(setHeaderBgColor)
@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <div>
-      <Header backgroundColor={headerBgColor} />
+      <Header className={`fixed bg-${headerBgColor}`}/>
 
       <div className={`slogan-container ${schibstedGrotesk.className}`}>
         <div className="slogan-content">
@@ -62,9 +62,7 @@ export default function Home() {
           />
           <p className="slogan-text">
             Doces momentos para
-            <span className={`highlighted-text ${schibstedGrotesk.className}`}> 
-              Compartilhar
-              </span>
+            <span className={`highlighted-text ${schibstedGrotesk.className}`}> Compartilhar</span>
           </p>
 
           <div className="inciar_pedido">
@@ -72,9 +70,7 @@ export default function Home() {
               document.querySelector('.cards')?.scrollIntoView({
                 behavior: 'smooth'
               })
-            }} className={`inicie_pedido ${poppins.className}`}>
-              Inicie seu pedido
-              </button>
+            }} className={`inicie_pedido ${poppins.className}`}>Inicie seu pedido</button>
           </div>
 
         </div>

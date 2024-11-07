@@ -112,6 +112,47 @@ html {
   margin: 0;
 }
 
+.containerContador {
+  display: flex;
+  align-self: center;
+}
+
+.contador {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border: 2px solid #0000007e;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.menos {
+  color: #0000006b;
+  font-size: 1.3rem;
+}
+
+.contador p {
+  font-size: 1.2rem;
+  width: 2rem;
+  text-align: center;
+}
+
+.mais {
+  color: var(--rosa-claro);
+  font-size: 1.3rem;
+}
+
+.highlighted-text {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 15px;
+  color: #F9AAC0;
+  display: block;
+  margin-top: 1rem;
+}
+
+
 .inicie_pedido {
   background-color: var(--rosa-claro);
   font-size: 1.5rem;
@@ -127,6 +168,53 @@ html {
 .inicie_pedido:hover {
   transform: scale(1.1);
   transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media (max-width: 1200px) {
+  .highlighted-text {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .highlighted-text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlighted-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .highlighted-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0 5%;
+  }
+
+  .slogan-container {
+    height: 100vh;
+    background-clip: border-box;
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .slogan-text {
+    font-size: 2rem;
+  }
+
+  .highlighted-text {
+    font-size: 1.5rem;
+  }
 }
 
 @layer utilities {

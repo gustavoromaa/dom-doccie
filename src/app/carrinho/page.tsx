@@ -15,6 +15,10 @@ function CarrinhoPageContent() {
         setIsLoading(false);
     }, [produtos]);
 
+    useEffect(() => {
+        document.title = "Dom Docciê - Carrinho";
+    }, []);
+
     if (isLoading) {
         return <p>Carregando...</p>;
     }
@@ -24,10 +28,10 @@ function CarrinhoPageContent() {
 
 export default function Carrinho() {
     return (
-            <CarrinhoProvider>
-                <Header backgroundColor="var(--rosa-claro)" />
+        <CarrinhoProvider>
+            <div className='flex flex-col h-screen w-full'>
                 <CarrinhoPageContent />
-                <Footer/>
-            </CarrinhoProvider>
+            </div>
+        </CarrinhoProvider>
     );
 }

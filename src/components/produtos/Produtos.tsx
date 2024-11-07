@@ -40,7 +40,7 @@ export default function Produtos() {
             <div id="opcoes" className="nossos_doces_opcoes_container">
                 <h1 className={`${windSong.className}`}>Nossos <span>D</span>oces</h1>
 
-                <p className={`nossos_opcoes_desc ${poppins.className}`}>Selecione um produto e faça seu pedido</p>
+                <p className={`nossos_opcoes_desc ${poppins.className}`}>Selecione um produto e faça seu pedido.</p>
 
                 <div className="nossos_doces_opcoes">
                     {Object.keys(produtos).map((key, index) => (
@@ -48,9 +48,9 @@ export default function Produtos() {
                             <Image
                                 key={index}
                                 width={500}
-                                height={500}
+                                height={50}
                                 className="nossos_doces_img"
-                                src={`/${produtos[key].imagem}.png`}
+                                src={`/produtos/${produtos[key].imagem}.png`}
                                 alt={produtos[key].titulo}
                                 onClick={() => handleImageClick(index)}
                                 style={{ boxShadow: `9px 3px 0 -2px ${produtos[key].cor_principal}` }}

@@ -61,8 +61,18 @@ export default function ResumoCompra() {
                 <div className="container_opcoes">
                     <div className="delivery">
 
-                        <div className="moto">
-                            <MdOutlineDeliveryDining />
+                        <div className="header_icons">
+                            <div className="moto">
+                                <MdOutlineDeliveryDining />
+                            </div>
+
+                            <div className="checkbox">
+                                <div className="checkbox_border">
+                                    <div className="checkbox_fill">
+                                        {/* .aa */}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="h1popcoes">

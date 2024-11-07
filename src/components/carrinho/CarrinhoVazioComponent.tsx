@@ -13,8 +13,9 @@ const poppins = Poppins({
 export default function CarrinhoVazioComponent() {
     return (
         <div className="flex flex-col min-h-screen bg-gray-100">
-            <div className="carrinho_body flex flex-1 items-center justify-center">
-                <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto bg-white rounded-lg shadow-md p-10 my-10">
+            <Header className='bg-rosa-claro w-full'/>
+            <div className="flex flex-1 items-center justify-center p-4">
+                <div className="flex flex-col items-center justify-center w-full max-w-4xl bg-white rounded-lg shadow-md p-10">
                     <div className="text-center mb-5">
                         <div className={`text-2xl mb-5 ${poppins.className}`}>
                             <span className="font-light">Seu carrinho está vazio &#x1F641;</span>
@@ -30,6 +31,7 @@ export default function CarrinhoVazioComponent() {
                     </div>
                 </div>
             </div>
+            <Footer className='w-full'/>
         </div>
     );
 }

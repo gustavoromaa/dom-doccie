@@ -1,4 +1,4 @@
-footer {
+.footer {
   position: relative;
   width: 100%;
   background-color: #F9AAC0;
@@ -15,8 +15,8 @@ footer {
   font-size: 2rem;
 }
 
-footer .social_icon,
-footer .menu {
+.footer .social_icon,
+.footer .menu {
   position: relative;
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@ footer .menu {
   flex-wrap: wrap;
 }
 
-footer .social_icon li a {
+.footer .social_icon li a {
   font-size: 2rem;
   color: var(--background);
   margin: 0 10px;
@@ -33,11 +33,11 @@ footer .social_icon li a {
   transition: 0.5s;
 }
 
-footer .social_icon li a:hover {
+.footer .social_icon li a:hover {
   transform: translateY(-10px);
 }
 
-footer .menu li a {
+.footer .menu li a {
   font-size: 1.2rem;
   color: #fff;
   margin: 0 10px;
@@ -46,11 +46,11 @@ footer .menu li a {
   opacity: 0.65;
 }
 
-footer .menu li a:hover {
+.footer .menu li a:hover {
   opacity: 1;
 }
 
-footer p {
+.footer p {
   color: #fff;
   text-align: center;
   margin-top: 15px;

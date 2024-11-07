@@ -46,30 +46,25 @@ export default function CarrinhoComponent() {
 
     return (
         <div>
-            <div className="carrinho_body">
-
-                <div className={`carrinho_container ${!hasSummary ? 'full-width' : ''}`}>
-
+            <Header className='absolute bg-rosa-claro w-full'/>
+            <div className="carrinho_body flex flex-col min-h-screen bg-gray-100">
+                <div className={`carrinho_container`}>
                     <div className="carrinho_list__products">
-
                         <div className={`carrinho_list__products_header ${poppins.className}`}>
-                        <span style={{ fontWeight: '300' }}>Seu Carrinho</span>
-                        {nome && <span style={{ fontWeight: '500' }}>, {nome}</span>}
+                            <span style={{ fontWeight: '300' }}>Seu Carrinho</span>
+                            {nome && <span style={{ fontWeight: '500' }}>, {nome}</span>}!
                         </div>
-
                         <div className="carrinho_list__products_products">
-                            {
-                                produtos.map((produto, index) => (
-                                    <ItemCarrinho key={index} item={produto} />
-                                ))
-                            }
+                            {produtos.map((produto, index) => (
+                                <ItemCarrinho key={index} item={produto} />
+                            ))}
                         </div>
-
                     </div>
-                        <ResumoCompra />
+                    <ResumoCompra />
                 </div>
             </div>
             <ModalNovoNome isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleSubmitNome} />
+            <Footer className='w-full'/>
         </div>
     );
 }

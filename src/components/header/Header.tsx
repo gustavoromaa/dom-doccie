@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import logo from "/public/Doccie.svg"
 import logoCor from "/public/logoComCor.svg"
+import {Tooltip} from "@nextui-org/react";
 
 import "./header.css"
 
@@ -17,40 +18,25 @@ const windSong = WindSong({
     subsets: ['latin'],
 })
 
-const NavLink = ({ href, children }) => {
-    const pathname = usePathname();
-
-    const rotaAtual = pathname === href;
-
+export default function Header({ className, style }: { className: string, style: any }) {
     return (
-        <Link href={href}>
-            <span className={rotaAtual ? 'nav-links active' : 'nav-links'}>{children}</span>
-        </Link>
-    );
-};
+        <div className={`header_background ${className}` } style={style}>
+            <div className="header_container">
+                <Link href="/">
+                        <Image
+                            src={logoCor}
+                            alt="logo"
+                            className="header_icon"
+                        />
+                </Link>
 
-export default function Header({ backgroundColor }: { backgroundColor: string }) {
-    return (
-        <div className="header" style={{ backgroundColor: backgroundColor }}>
-            <div className="headerbanana">
-                <NavLink href="/">
-                    <div className="logo">
-                        <div className="imgs">
-                            <Image
-                                src={logoCor}
-                                alt="logo"
-                            />
-                        </div>
-                    </div>
-                </NavLink>
+                    <Link href="/">
+                        <button className={`header_logo ${windSong.className}`}>Dom Docciê</button>
+                    </Link>
 
-                <NavLink href="/">
-                    <button className={`logotxt ${windSong.className}`}>Dom Docciê</button>
-                </NavLink>
-
-                <NavLink href="/carrinho">
-                    <button className="btnbag"><BsBag /></button>
-                </NavLink>
+                <Link href="/carrinho">
+                        <BsBag className="header_icon_cart" />
+                </Link>
             </div>
         </div>
     );

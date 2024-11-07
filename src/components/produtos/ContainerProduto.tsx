@@ -1,4 +1,5 @@
 import { ProdutoType } from '../../models/produto';
+import ModalProduto from '../modal/ModalProduto';
 import Produto from './Produto';
 
 import { Poppins } from "next/font/google";

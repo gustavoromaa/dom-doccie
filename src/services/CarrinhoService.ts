@@ -38,16 +38,16 @@ export class CarrinhoService {
     }
   }
 
-  adicionarProduto(produto: ProdutoCarrinhoType): void {
+  adicionarProduto(produto: ProdutoCarrinhoType, quantidade: number): void {
     const produtoExistente = this.carrinho.produtos.find(p => p.id === produto.id);
     if (produtoExistente) {
-      produtoExistente.quantidade += 1;
+      produtoExistente.quantidade += quantidade;
       produtoExistente.precoTotal! += produtoExistente.precoUnitario;
     } else {
       const novoProduto: ProdutoCarrinhoType = {
         ...produto,
-        quantidade: 1,
-        precoTotal: produto.precoUnitario
+        quantidade: quantidade,
+        precoTotal: produto.precoUnitario,
       };
       this.carrinho.produtos.push(novoProduto);
     }

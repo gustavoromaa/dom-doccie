@@ -11,12 +11,12 @@ const windSong = WindSong({
     subsets: ['latin'],
 })
 
-export default function Footer() {
+export default function Footer({className}: {className: string}) {
 
     
 
     return(
-        <footer>
+        <div className={`footer ${className}`}>
 
             <Link href="/">
                 <button className={`footer_logotxt ${windSong.className}`}>Dom Docciê</button>
@@ -32,6 +32,6 @@ export default function Footer() {
                   <li><a href="#">Sobre</a></li>
                   <li><a href="#">Desenvolvedores</a></li>
               </ul> */}
-          </footer>
+          </div>
     )
 }

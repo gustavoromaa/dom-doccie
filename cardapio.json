@@ -1,9 +1,9 @@
 {
   "produtos": {
-    "doces_background": {
+    "bolo_no_pote": {
       "titulo": "Bolo no pote",
       "cor_principal": "#F9AAC0",
-      "imagem": "bolonopote",
+      "imagem": "testando",
       "sabores": [
         {
           "id": 1,
@@ -15,7 +15,7 @@
         },
         {
           "id": 2,
-          "nome": "Bolo no Pote de Brigadeiro Branco c/ Uva",
+          "nome": "Bolo no pote de Brigadeiro Branco c/ Uva",
           "descricao": "chocolate branco com bombom ouro branco",
           "alt": "Bolo no pote",
           "imagem": "bp_brigadeiroBrancoUva",
@@ -23,7 +23,7 @@
         },
         {
           "id": 3,
-          "nome": "Bolo no Pote de Ouro branco",
+          "nome": "Bolo no pote de Ouro branco",
           "descricao": "Bolo de Baunilha, Bombom Ouro Branco, Brigadeiro branco",
           "alt": "Bolo no pote",
           "imagem": "bp_ouroBranco",
@@ -31,7 +31,7 @@
         },
         {
           "id": 4,
-          "nome": "Bolo no Pote de Sonho de Valsa",
+          "nome": "Bolo no pote de Sonho de Valsa",
           "descricao": "Bolo de Chocolate, Sonho de Valsa, Brigadeiro de Chocolate",
           "alt": "Bolo no pote",
           "imagem": "bp_sonhoDeValsa",
@@ -39,7 +39,7 @@
         },
         {
           "id": 5,
-          "nome": "Bolo no Pote de Prestígio",
+          "nome": "Bolo no pote de Prestígio",
           "descricao": "Bolo de Baunilha, Coco ralado, Brigadeiro de Chocolate",
           "alt": "Bolo no pote",
           "imagem": "bp_prestigio",
@@ -47,7 +47,7 @@
         },
         {
           "id": 6,
-          "nome": "Bolo no Pote de Maracujá",
+          "nome": "Bolo no pote de Maracujá",
           "descricao": "Bolo de Baunilha ou Chocolate, Brigadeiro de Maracujá ou Chocolate, Geleia Artesanal de Maracujá",
           "alt": "Bolo no pote",
           "imagem": "bp_maracuja",
@@ -55,7 +55,7 @@
         },
         {
           "id": 7,
-          "nome": "Bolo no Pote de Amendoim/Shot",
+          "nome": "Bolo no pote de Amendoim/Shot",
           "descricao": "Bolo de Chocolate, Chocolate Shot, Amendoim, Brigadeiro de Chocolate",
           "alt": "Bolo no pote",
           "imagem": "bp_amendoim",
@@ -63,7 +63,7 @@
         },
         {
           "id": 8,
-          "nome": "Bolo no Pote de Oreo",
+          "nome": "Bolo no pote de Oreo",
           "descricao": "Bolo de Baunilha, Brigadeiro de Oreo, Biscoito Oreo",
           "alt": "Bolo no pote",
           "imagem": "bp_oreo",
@@ -71,7 +71,7 @@
         },
         {
           "id": 9,
-          "nome": "Bolo no Pote de Kit Kat",
+          "nome": "Bolo no pote de Kit Kat",
           "descricao": "Bolo de Chocolate ou Baunilha, KitKat Branco ou Preto, Brigadeiro de Chocolate ou Brigadeiro Branco",
           "alt": "Bolo no pote",
           "imagem": "bp_kitkat",
@@ -81,8 +81,8 @@
     },
     "bombom": {
       "titulo": "Bombom",
-      "cor_principal": "#706DC3",
-      "imagem": "bombons",
+      "cor_principal": "#EDC57D",
+      "imagem": "testando2",
       "sabores": [
         {
           "id": 10,
@@ -161,7 +161,7 @@
     "brownie": {
       "titulo": "Brownie",
       "cor_principal": "#65A7FF",
-      "imagem": "brownie",
+      "imagem": "testando3",
       "sabores": [
         {
           "id": 19,
@@ -248,7 +248,7 @@
     "copoDaFelicidade": {
       "titulo": "Copo da Felicidade",
       "cor_principal": "#7BD0B6",
-      "imagem": "copodafelicidade",
+      "imagem": "testando4",
       "sabores": [
         {
           "id": 29,
