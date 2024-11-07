@@ -8,6 +8,7 @@ import { RiMapPin2Line } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import TipoEntrega from "./tipoEntrega";
 import { motion, AnimatePresence } from 'framer-motion';
+import { Input } from "@nextui-org/react";
 
 const poppins = Poppins({
     weight: ['300', '500', '700'],
@@ -20,7 +21,7 @@ export default function ResumoCompra() {
 
     const { valorCarrinho, quantidadeTotal } = useCarrinho();
 
-    function definirTipoEntrega(tipo: string){
+    function definirTipoEntrega(tipo: string) {
         localStorage.setItem('tipoEntrega', tipo);
         setTipoEntrega(tipo);
     }
@@ -99,9 +100,25 @@ export default function ResumoCompra() {
 
                 <div className="container_opcoes">
                     <TipoEntrega icone={<MdOutlineDeliveryDining />} titulo="Entrega" descricao="A entrega será realizada por meio de um aplicativo de entrega." ativo={tipoEntrega === "Entrega"} onClick={() => definirTipoEntrega("Entrega")} />
-                    <TipoEntrega icone={<RiMapPin2Line />} titulo="Retirada" descricao="A entrega será realizada por meio de um local de retirada definido." ativo={tipoEntrega === "Retirada"} onClick={() => definirTipoEntrega("Retirada")}/>
+                    <TipoEntrega icone={<RiMapPin2Line />} titulo="Retirada" descricao="A entrega será realizada por meio de um local de retirada definido." ativo={tipoEntrega === "Retirada"} onClick={() => definirTipoEntrega("Retirada")} />
                 </div>
             </div>
+            {
+                tipoEntrega === 'Entrega' &&
+                <div className={`carrinho_delivery ${poppins.className}`} style={{ fontWeight: 300 }}>
+
+                    <div className={`header_carrinho_delivery`} >
+                        <h1>Entrega</h1>
+                    </div>
+
+                    <div className="container_opcoes flex flex-row gap-3">
+                        <Input placeholder="CEP" />
+                        <Input placeholder="Nº" className="w-2/4" accept="number" />
+                        <Input placeholder="Complemento" />
+                    </div>
+
+                </div>
+            }
         </div>
     )
 }
