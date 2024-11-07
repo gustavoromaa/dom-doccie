@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <div>
-      <Header className={`fixed bg-${headerBgColor}`}/>
+      <Header className={`bg-${headerBgColor}`}/>
 
       <div className={`slogan-container ${schibstedGrotesk.className}`}>
         <div className="slogan-content">

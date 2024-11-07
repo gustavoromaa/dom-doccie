@@ -22,7 +22,7 @@ export default function Header({ className, style }: { className: string, style:
     return (
         <div>
             <div className={`header_mobile ${className}`} style={style}>
-                <div className="header_mobile_container">
+                <div className={`header_mobile_container ${className}`} style={style}>
                     <Link href="/">
                         <Image
                             src={logoCor}
