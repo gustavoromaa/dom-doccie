@@ -3,9 +3,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 87vh;
+    height: auto;
     width: 100%;
     background-color: #EDEDED;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .carrinho_container {
@@ -79,6 +81,15 @@
     font-weight: 400;
 }
 
+
+.carrinho_produt_prices{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+}
+
+
 .valor {
     font-size: 1.2rem;
 }
@@ -99,7 +110,7 @@
 }
 
 .btnRemove_item:hover {
-    color: red
+    color: red;
 }
 
 .carrinho_summary {
@@ -108,6 +119,7 @@
     justify-content: space-between;
     gap: 1rem;
     width: 26rem;
+    align-self: flex-start;
 }
 
 .carrinho_cart__summary,
@@ -118,6 +130,13 @@
     background-color: var(--rosa-claro);
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
+}
+
+.carrinho_produt_prices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
 }
 
 .valor {
@@ -163,7 +182,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .header_icons {
@@ -328,20 +346,62 @@
     }
 
     .carrinho_container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
+        padding: 1rem;
     }
 
     .carrinho_list__products,
     .carrinho_summary {
         width: 100%;
     }
+
+    .carrinho_summary {
+        align-self: flex-end;
+    }
+
 }
+
+@media (max-width: 1024px) {
+    .carrinho_list__products_item {
+        padding: 10px 0 10px 10px;
+        /* gap: .2rem; */
+    }
+
+    .carrinho_list__products_item img {
+        width: 60px;
+        height: auto;
+    }
+
+    .h1p {
+        width: 200px;
+    }
+
+    .valor {
+        width: 100px;
+        text-align: right;
+    }
+
+    .remove__item {
+        padding: 2px 20px;
+    }
+
+    .btnSend {
+        padding: 10px;
+    }
+
+    .remove__item {
+        padding: 2px 20px;
+        margin-left: 10px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .carrinho_list__products_item {
         flex-direction: column;
         align-items: flex-start;
+        gap: 1rem;
         padding: 10px;
     }
 
@@ -349,6 +409,14 @@
         width: 100%;
         height: auto;
     }
+
+    .carrinho_produt_prices{
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    
 
     .h1p {
         width: 100%;
@@ -360,8 +428,11 @@
     }
 
     .remove__item {
-        padding: 5px 10px;
-        font-size: 1rem;
+        order: 4;
+        padding: 2px 20px;
+        border-radius: 12px;
+        align-self: flex-end;
+        margin-left: 0;
     }
 
     .btnSend {
@@ -371,7 +442,6 @@
 }
 
 @media (max-width: 480px) {
-
     .header_carrinho_delivery,
     .header_icons,
     .header_carrinho_summary {
@@ -391,41 +461,68 @@
         flex-direction: row;
         align-items: center;
         padding: 10px 0 10px 10px;
+        gap: 0.6rem;
     }
 
     .containerContador {
-        width: 100%;
+        display: flex;
+        align-self: center;
+        gap: 1.5rem;
     }
 
+    .containerContador p {
+        font-size: 1rem;
+        width: 2rem;
+        text-align: center;
+    }
+    
     .contador {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         border: 2px solid #0000007e;
         gap: 0;
-        padding: 5px 15px;
+        padding: 2px 2px;
         border-radius: 5px;
+        height: auto;
     }
 
     .h1p {
-        width: 25%;
+        width: auto;
+    }
+
+    .carrinho_produt_prices{
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
     }
     
+    
+    .valor {
+        text-wrap: nowrap;
+        width: auto;
+        text-align: left;
+    }
+
     .h1p h1 {
         font-size: 1.1rem;
-        flex-wrap: wrap;
-        display:flex;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: nowrap;
     }
+
     .carrinho_list__products_item img {
         width: 20%;
         height: auto;
     }
 
     .carrinho_summary {
+        align-self: center;
         margin: 3rem;
         gap: 2rem;
+    }
+
+    .carrinho_cart__summary {
+        order: 1;
     }
 
     .carrinho_cart__summary,
@@ -465,4 +562,17 @@
     .btnSend button {
         font-size: 1rem;
     }
+
+    .remove__item {
+        align-self: center;
+        background-color: var(--rosa-claro);
+        color: #fff;
+        padding: 2px 12px;
+        font-size: 1.3rem;
+        border-top-left-radius: 14.73px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 14.73px;
+    }
+
 }

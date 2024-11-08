@@ -18,11 +18,11 @@ const windSong = WindSong({
     subsets: ['latin'],
 })
 
-export default function Header({ className, style }: { className: string, style: any }) {
+export default function Header({ className, classNameMobile, style }: { className?: string, classNameMobile?: string, style?: any }) {
     return (
         <div>
             <div className={`header_mobile ${className}`} style={style}>
-                <div className={`header_mobile_container ${className}`} style={style}>
+                <div className={`header_mobile_container`} style={style}>
                     <Link href="/">
                         <Image
                             src={logoCor}
@@ -36,7 +36,7 @@ export default function Header({ className, style }: { className: string, style:
                 </div>
             </div>
             <div className={`header_background ${className}`} style={style}>
-                <div className="header_container">
+                <div className={`header_container`} style={style}>
                     <Link href="/">
                         <Image
                             src={logoCor}

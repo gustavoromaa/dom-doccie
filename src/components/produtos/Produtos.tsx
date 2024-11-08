@@ -44,7 +44,7 @@ export default function Produtos() {
 
                 <div className="nossos_doces_opcoes">
                     {Object.keys(produtos).map((key, index) => (
-                        <div className="nossos_doces_item">
+                        <div className="nossos_doces_item" key={index}>
                             <Image
                                 key={index}
                                 width={500}

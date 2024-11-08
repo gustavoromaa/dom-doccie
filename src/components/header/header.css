@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20%;
+  padding: 0 22%;
 }
 
 .header_icon {
@@ -42,7 +42,7 @@
 
 @media (max-width: 768px) {
   .header_container {
-    flex-direction: column;
+    flex-direction: row;
     padding: 0 10%;
   }
 
@@ -51,10 +51,16 @@
     min-width: 150px;
   }
 
-  .header_icon, .header_icon_cart {
+  .header_icon {
     width: 80px;
     height: auto;
   }
+
+  .header_icon_cart {
+    width: 50px;
+    height: auto;
+  }
+
 }
 
 @media (max-width: 480px) {

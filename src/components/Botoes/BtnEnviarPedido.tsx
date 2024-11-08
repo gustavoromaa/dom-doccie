@@ -1,7 +1,7 @@
 import { AiOutlineSend } from "react-icons/ai";
 import { useCarrinho } from "../../context/CarrinhoContext";
 
-export default function BtnEnviarPedido() {
+export default function BtnEnviarPedido({ endereco, canClick }: { endereco?: string, canClick: boolean }) {
 
     const nome = localStorage.getItem('nome');
     const tipoEntrega = localStorage.getItem('tipoEntrega')!;
@@ -15,16 +15,17 @@ export default function BtnEnviarPedido() {
         )).join('') +
         "\n" +
         `➡️ Valor *total* dos itens: *R$${valorCarrinho.toFixed(2)}*\n\n` +
-        `➡️ *Modo de envio:* ${tipoEntrega}\n`
+        `➡️ *Modo de envio:* ${tipoEntrega} \n` +
+        (tipoEntrega === 'Entrega' ? `➡️ *Endereço:* ${endereco}\n\n` : '')
 
     function onClick() {
         const encodedMessage = encodeURIComponent(message);
-        window.open(`https://api.whatsapp.com/send/?phone=554198302447&text=${encodedMessage}`, '_blank');
+        window.open(`https://api.whatsapp.com/send/?phone=554198335776&text=${encodedMessage}`, '_blank');
     }
 
     return (
-        <div>
-            <button onClick={onClick}>
+        <div className="btnSend" style={{backgroundColor: canClick ? 'var(--rosa-claro)' : '#D3D3D3'}}>
+            <button className="btnEnviarPedido" onClick={onClick} disabled={!canClick} style={{ cursor: canClick ? 'pointer' : 'not-allowed' , }}>
                 <span style={{ fontSize: 26 }}><AiOutlineSend /></span> Enviar pedido
             </button>
         </div>

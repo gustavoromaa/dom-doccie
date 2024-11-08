@@ -8,7 +8,7 @@ import { RiMapPin2Line } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import TipoEntrega from "./tipoEntrega";
 import { motion, AnimatePresence } from 'framer-motion';
-import { Input } from "@nextui-org/react";
+import EnviarEndereco from "./EnviarEndereco";
 
 const poppins = Poppins({
     weight: ['300', '500', '700'],
@@ -18,13 +18,26 @@ const poppins = Poppins({
 export default function ResumoCompra() {
 
     const [tipoEntrega, setTipoEntrega] = useState('');
+    const [possivelEnviarPedido, setpossivelEnviarPedido] = useState(false);
+    const [endereco, setEndereco] = useState('');
 
     const { valorCarrinho, quantidadeTotal } = useCarrinho();
 
     function definirTipoEntrega(tipo: string) {
         localStorage.setItem('tipoEntrega', tipo);
+
+        if (tipo === 'Retirada') {
+            setpossivelEnviarPedido(true);
+        } else {
+            setpossivelEnviarPedido(false);
+        }
+
         setTipoEntrega(tipo);
     }
+
+    const handleAddressComplete = (isComplete: boolean) => {
+        setpossivelEnviarPedido(isComplete);
+    };
 
     useEffect(() => {
         setTipoEntrega(localStorage.getItem('tipoEntrega') || 'Entrega');
@@ -85,9 +98,7 @@ export default function ResumoCompra() {
                         <h1>Total R$ {valorCarrinho.toFixed(2)}</h1>
                     </div>
 
-                    <div className="btnSend">
-                        <BtnEnviarPedido />
-                    </div>
+                    <BtnEnviarPedido endereco={endereco} canClick={possivelEnviarPedido} />
                 </div>
 
             </div>
@@ -104,20 +115,7 @@ export default function ResumoCompra() {
                 </div>
             </div>
             {
-                tipoEntrega === 'Entrega' &&
-                <div className={`carrinho_delivery ${poppins.className}`} style={{ fontWeight: 300 }}>
-
-                    <div className={`header_carrinho_delivery`} >
-                        <h1>Entrega</h1>
-                    </div>
-
-                    <div className="container_opcoes flex flex-row gap-3">
-                        <Input placeholder="CEP" />
-                        <Input placeholder="Nº" className="w-2/4" accept="number" />
-                        <Input placeholder="Complemento" />
-                    </div>
-
-                </div>
+                tipoEntrega === 'Entrega' && <EnviarEndereco onAddressComplete={handleAddressComplete} setEndereco={setEndereco} />
             }
         </div>
     )

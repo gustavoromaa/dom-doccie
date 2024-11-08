@@ -5,7 +5,7 @@ import { ProdutoCarrinhoType } from "../../models/carrinho";
 import ContadorQuantidade from "./ContadorQuantidade";
 import { useState, useEffect } from "react";
 import { useCarrinho } from "../../context/CarrinhoContext";
-import {Tooltip} from "@nextui-org/react";
+import { Tooltip } from "@nextui-org/react";
 
 const poppins = Poppins({
     weight: ['300', '500', '700'],
@@ -43,9 +43,10 @@ export default function ItemCarrinho({ item }: { item: ProdutoCarrinhoType }) {
                 <p className={`${poppins.className}`}><span style={{ fontWeight: '300' }}>{item.nome}</span></p>
             </div>
 
-            <ContadorQuantidade item={item} quantidade={quantidade} setQuantidade={setQuantidade} />
-
-            <p className={`valor ${poppins.className}`}>R$ <span className="carrinho_produto_preco">{precoTotal?.toFixed(2)}</span></p>
+            <div className="carrinho_produt_prices">
+                <p className={`valor ${poppins.className}`}>R$ <span className="carrinho_produto_preco">{precoTotal?.toFixed(2)}</span></p>
+                <ContadorQuantidade item={item} quantidade={quantidade} setQuantidade={setQuantidade} />
+            </div>
 
             <div className="remove__item">
                 <Tooltip color="danger" content="Remover item">

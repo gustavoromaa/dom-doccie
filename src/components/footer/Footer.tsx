@@ -11,7 +11,7 @@ const windSong = WindSong({
     subsets: ['latin'],
 })
 
-export default function Footer({className}: {className: string}) {
+export default function Footer({className}: {className?: string}) {
 
     
 
@@ -23,8 +23,8 @@ export default function Footer({className}: {className: string}) {
             </Link>
               <ul className="social_icon">
                   <li><a href="https://www.instagram.com/_dom_doccie_12/" target="_blank"><FaInstagram/></a></li>
-                  <li><a href="https://www.facebook.com/" target="_blank"><FaFacebookF/></a></li>
-                  <li><a href="https://wa.me/4197336348" target="_blank"><FaWhatsapp/></a></li>
+                  <li><a href="https://www.facebook.com/share/1Dpgd53L1r/" target="_blank"><FaFacebookF/></a></li>
+                  <li><a href="https://wa.me/4198335776" target="_blank"><FaWhatsapp/></a></li>
               </ul>
 
               {/* <ul className="menu">

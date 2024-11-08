@@ -3,7 +3,6 @@ import "./Produto.css";
 import Image from "next/image";
 import BtnAdicionarCarrinho from "../Botoes/BtnAdicionarCarrinho";
 import { SaboresType } from "../../models/sabores";
-import { Yrsa, Alata } from 'next/font/google';
 import { Poppins } from "next/font/google";
 import localFont from 'next/font/local';
 import ModalProduto from "../modal/ModalProduto";
@@ -11,24 +10,11 @@ import ModalProduto from "../modal/ModalProduto";
 const sagona = localFont({
   src: [
     {
-      path: '../../app/fonts/SAGONABOOK.ttf',
+      path: '../../../public/fonts/sagonabook.ttf',
       weight: '400',
       style: 'normal',
     },
   ],
-});
-
-const schibstedGrotesk = Yrsa({
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const alata = Alata({
-  weight: ['400'],
-  style: ['normal'],
-  subsets: ['latin'],
 });
 
 const poppins = Poppins({

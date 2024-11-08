@@ -19,14 +19,19 @@ export class CarrinhoService {
   }
 
   private salvarCarrinho(): void {
-    this.carrinho.valorCarrinho = this.carrinho.produtos.reduce((acc, p) => acc + p.precoTotal!, 0);
-    this.carrinho.quantidadeTotal = this.carrinho.produtos.reduce((acc, p) => acc + p.quantidade, 0);
-    localStorage.setItem(CARRINHO_STORAGE_KEY, JSON.stringify(this.carrinho));
+    if (typeof window !== 'undefined') {
+      this.carrinho.valorCarrinho = this.carrinho.produtos.reduce((acc, p) => acc + p.precoTotal!, 0);
+      this.carrinho.quantidadeTotal = this.carrinho.produtos.reduce((acc, p) => acc + p.quantidade, 0);
+      localStorage.setItem(CARRINHO_STORAGE_KEY, JSON.stringify(this.carrinho));
+    }
   }
 
   private carregarCarrinho(): CarrinhoType {
-    const carrinhoJson = localStorage.getItem(CARRINHO_STORAGE_KEY);
-    return carrinhoJson ? JSON.parse(carrinhoJson) : { produtos: [], valorCarrinho: 0, quantidadeTotal: 0 };
+    if (typeof window !== 'undefined') {
+      const carrinhoJson = localStorage.getItem(CARRINHO_STORAGE_KEY);
+      return carrinhoJson ? JSON.parse(carrinhoJson) : { produtos: [], valorCarrinho: 0, quantidadeTotal: 0 };
+    }
+    return { produtos: [], valorCarrinho: 0, quantidadeTotal: 0 };
   }
 
   atualizarQuantidade(produtoId: number, quantidade: number): void {

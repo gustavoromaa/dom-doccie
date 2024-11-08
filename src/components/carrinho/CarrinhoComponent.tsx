@@ -47,9 +47,9 @@ export default function CarrinhoComponent() {
 
     return (
         <div className="mt-1">
-            <Header className='absolute bg-rosa-claro w-full' />
+            <Header className='absolute bg-rosa-claro' style={{ backgroundColor: 'var(--rosa-claro)' }} />
             <div className="carrinho_body flex flex-col min-h-screen bg-gray-100">
-                <div className={`carrinho_container mt-28`}>
+                <div className={`carrinho_container mt-32`}>
                     <motion.div
                         className="carrinho_list__products"
                         initial={{ opacity: 0, scale: 0.95 }}

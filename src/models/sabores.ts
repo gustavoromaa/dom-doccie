@@ -1,5 +1,5 @@
 export interface SaboresType {
-    id?: number,
+    id: number,
     categoria?: string,
     nome: string;
     descricao: string;

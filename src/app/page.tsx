@@ -42,18 +42,29 @@ function addScrollEvent(setHeaderBgColor: (color: string) => void) {
   })
 }
 
+function addParallaxEffect() {
+  window.addEventListener('scroll', function () {
+    const parallax = document.querySelector('.parallax') as HTMLElement;
+    if (parallax) {
+      parallax.style.backgroundPositionY = `${window.scrollY * 0.5}px`;
+    }
+  });
+}
+
 export default function Home() {
   const [headerBgColor, setHeaderBgColor] = useState('transparent');
 
   useEffect(() => {
-    addScrollEvent(setHeaderBgColor)
+    addScrollEvent(setHeaderBgColor);
+    addParallaxEffect();
   }, [])
 
   return (
     <div>
-      <Header className={`bg-${headerBgColor}`}/>
+      <Header className={`fixed bg-${headerBgColor}`} />
 
       <div className={`slogan-container ${schibstedGrotesk.className}`}>
+        <div className="parallax"></div>
         <div className="slogan-content">
           <Image
             src={logoSlogan}
